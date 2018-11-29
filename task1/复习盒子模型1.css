@@ -1,0 +1,16 @@
+body{
+    margin:0;
+}
+.boxs1{
+    width: 25%;
+    height: 25vw;
+    margin-left:11px;
+    margin-top: 9px;
+    background-color: orange;
+    float: left;
+}
+div{
+    border:0px solid;
+    border-radius: 20px;
+
+}
