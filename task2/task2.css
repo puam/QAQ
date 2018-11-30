@@ -1,0 +1,45 @@
+body{margin: 0;
+    padding: 0;
+    color: white;
+    background-color: aqua;
+}
+.task21{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.task22{
+    margin-top:7px;
+    text-align: center;
+
+}
+.txt1{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    margin-top:5em;
+    font-size: 1rem;
+}
+.task23{
+    float: left;
+    margin-top:100px ;
+    margin-left: 10%;
+}
+.task24{
+    float: right;
+    margin-top: 100px;
+    margin-right:10%;
+}
+.txt2{
+    font-size: 1rem;
+    float: left;
+    margin-top: 178px;
+    margin-left: -80px;
+}
+.txt3{
+    font-size: 1rem;
+    float: right;
+    margin-top: 178px;
+    margin-right: -80px;
+}
+
+
