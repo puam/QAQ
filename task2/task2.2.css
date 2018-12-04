@@ -1,0 +1,45 @@
+html{
+    height: 100%;
+}
+body{
+    color: white;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    background-color: cyan;
+}
+.zuo{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.zhong{
+    margin-top: 8px;
+    text-align: center;
+}
+.wen1{
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.zuoyou1{
+    float: left;
+    margin-top: 50px;
+    margin-left: 70px;
+}
+.zuoyou2{
+    float: left;
+    margin-left:-80px ;
+    margin-top: 120px;
+}
+.zuoyou3{
+    float: right;
+    margin-top: 50px;
+    margin-right: 70px;
+}
+.zuoyou4{
+    float: right;
+    margin-top: 120px;
+    margin-right: -80px;
+}
+
+

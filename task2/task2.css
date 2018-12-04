@@ -1,7 +1,11 @@
+html{
+    height:100%;
+}
 body{margin: 0;
     padding: 0;
     color: white;
     background-color: aqua;
+
 }
 .task21{
     margin-top: 5px;
