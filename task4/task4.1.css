@@ -1,0 +1,26 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.headerq{
+    position: fixed;
+    background-color: #5fc0cd;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+}
+.headerw{
+    position: fixed;
+    top: 22px;
+}
+.contentq{
+    background-image: none;
+    background-repeat: repeat-x;
+}
