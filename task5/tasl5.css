@@ -19,7 +19,7 @@ header{
     height: 60px;
     background-color: #5fc0cd;
     position: fixed;
-    top: auto;
+    top: 0;
     }
 .top1{
     width:100px;
