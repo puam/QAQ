@@ -131,6 +131,7 @@ header{
     font-size: 20px;
     margin-right: 35px;
     margin-top: 13px;
+    display: inline-flex;
 }
 .center-four{
     display: flex;
@@ -149,7 +150,7 @@ header{
 }
 .center-eight{
     padding-left: 10px;
-    width: 10px;
+    margin-top: -3px;
 }
 .below{
     height: 60px;
