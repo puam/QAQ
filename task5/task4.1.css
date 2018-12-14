@@ -99,3 +99,46 @@ body{
     padding-top: 6px;
     padding-left: 10px;
 }
+.working-years{
+    display: flex;
+    padding-left: 50px;
+    color: #999999;
+    height: 50px;
+    border-bottom: 1px solid #dddddd;
+}
+.age-limit{
+    color: black;
+    font-weight: 400;
+    padding-left: 60px;
+}
+.working-hours{
+    display: flex;
+    color: #999999;
+    padding-left: 50px;
+    height: 50px;
+    border-bottom: 1px solid #dddddd;
+}
+.day{
+    color: black;
+    font-weight: 400;
+    padding-left: 60px;
+}
+.price{
+    padding-left: 60px;
+    color: #e26163;
+    font-size: 20px;
+    font-weight: 600;
+}
+.intro{
+    display: flex;
+    padding-left: 50px;
+    border-bottom: 1px solid #dddddd;
+    color: #999999;
+    /*white-space: nowrap;*/
+
+}
+.craftsmanship{
+    padding-left: 60px;
+    width: 240px;
+    word-wrap: break-word;
+}
