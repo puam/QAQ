@@ -7,52 +7,57 @@ body {
     margin: 0;
     padding: 0;
 }
-header{
+
+header {
     width: 100%;
     height: 60px;
-    }
+}
 .top{
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    background-color: #5fc0cd;
+}
+.top1{
+    width: 50vw;
+    height: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 60px;
-    background-color: #5fc0cd;
-    position: fixed;
-    top: 0;
-    }
-.top1{
-    width:100px;
-    line-height: 330%;
-    color: white;
+    justify-content: space-between;
     background-color: #55a8b3;
-    text-align: center;
-    height: 52px;
+    margin-top: 5px;
+    margin-left: 24%;
     border-radius: 10px;
 }
 .top2{
-    width: 100px;
-    height: 52px;
-    line-height: 330%;
-    color: #5fc0cd;
-    background-color: white;
+    width: 25vw;
+    height: 50px;
     text-align: center;
+    line-height: 240%;
+    color: white;
+    font-size: 20px;
     border-radius: 10px;
-    margin: -3px;
 }
 .top3{
+    background-color: white;
+    width: 25vw;
+    height: 50px;
+    text-align: center;
+    line-height: 240%;
+    color: #5fc0cd;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.top4{
     position: fixed;
     right: 10px;
     top: 10px;
 }
-.top4{
-    width: 25px;
-    height: 35px;
-}
-.boxx{
+.boxx {
     width: 100%;
     height: 60px;
 }
+
 .dropbtn {
     background-color: white;
     color: #999999;
@@ -66,12 +71,13 @@ header{
     background-position: 92%;
     background-repeat: no-repeat no-repeat;
 }
+
 .dropdown {
     width: 33.2vw;
     height: 60px;
     text-align: center;
     border-bottom: 1px solid #999999;
-    border-right: 1px solid#999999;
+    border-right: 1px solid #999999;
     position: relative;
 }
 
@@ -80,7 +86,7 @@ header{
     position: absolute;
     background-color: #f9f9f9;
     width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
@@ -89,33 +95,40 @@ header{
     text-decoration: none;
     display: block;
 }
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 .fuji {
     display: flex;
     position: fixed;
 }
-.boxx1{
+
+.boxx1 {
     width: 100%;
     height: 60px;
 }
-.center{
+
+.center {
     display: flex;
     padding-left: 10px;
     padding-top: 10px;
 }
+
 .center-six {
     padding-left: 15px;
     padding-top: 3px;
     color: #999999;
 }
-.center-one{
+
+.center-one {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-.center-two{
+
+.center-two {
     white-space: nowrap;
     overflow: hidden;
     border: 1px solid white;
@@ -126,34 +139,40 @@ header{
     font-size: 20px;
     margin-top: 10px;
 }
-.center-three{
+
+.center-three {
     color: red;
     font-size: 20px;
     margin-right: 35px;
     margin-top: 13px;
     display: inline-flex;
 }
-.center-four{
+
+.center-four {
     display: flex;
     padding-left: 10px;
     border-bottom: 1px solid #dddddd;
     height: 40px;
     margin-top: -15px;
 }
-.center-seven{
+
+.center-seven {
     padding-left: 15px;
     color: #999999;
 }
-.center-flve{
+
+.center-flve {
     width: 20px;
     height: 20px;
 }
-.center-eight{
+
+.center-eight {
     padding-left: 10px;
     margin-top: -3px;
 }
-.below{
-    height: 60px;
+
+.below {
+    height: 80px;
     width: 100%;
     background: #faf8fb;
     position: fixed;
@@ -161,33 +180,45 @@ header{
     display: flex;
     justify-content: space-around;
 }
-.below1{
+
+.below1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     color: #5fc0cd;
+    margin-top: 5px;
 }
-.below2{
+
+.below2 {
     margin-left: 5px;
+    margin-bottom: 8px;
 }
-.below5{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.below6{
-    margin-left: 5px;
-}
-.below3{
+
+.below3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     background: #5fc0cd;
     border-radius: 50%;
+    margin-top: 6px;
 }
-.below4{
+
+.below4 {
     width: 30px;
     height: 30px;
+}
+
+.below5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.below6 {
+    margin-left: 5px;
+    margin-bottom: 10px;
+    color: #999999;
 }
