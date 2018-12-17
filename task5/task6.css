@@ -308,7 +308,6 @@ body{
     text-align: center;
     line-height: 300%;
     background-color: #ffffff;
-    color: #5fc0cd;
     border-left: 1px solid #5fc0cd;
     border-right: 1px solid #5fc0cd;
     border-top: 1px solid #5fc0cd;
@@ -317,20 +316,21 @@ body{
     margin-left: 20px;
     cursor: pointer;
 }
+.word{
+    color: #5fc0cd;
+}
 .phone{
     width: 45%;
     text-align: center;
     line-height: 300%;
-    color: #ffffff;
     background-color: #5fc0cd;
     border-radius: 8px;
     margin-right: 20px;
     cursor: pointer;
 }
-a{
-    text-decoration: none;
+.word-one{
     color: white;
 }
-.text{
-    color: #5fc0cd;
+a{
+    text-decoration: none;
 }
