@@ -16,8 +16,12 @@ body{
     background-color: #5fc0cd;
 }
 .homeger-two{
+    margin-left: 10px;
+}
+.homeger-foul{
     width: 22px;
     height: 37px;
+    margin-right: 10px;
 }
 .homeger-three{
     display: flex;
@@ -231,12 +235,12 @@ body{
 .vertical-two{
     padding-left: 5px;
     border-right: 1px solid #dddddd;
-    padding-right: 20px;
+    padding-right: 15px;
 }
 .vertical-three{
     display: flex;
     align-items: center;
-    padding-left: 10px;
+    padding-left: 15px;
 }
 .vertical-foul{
     padding-left: 5px;
@@ -286,6 +290,10 @@ body{
     padding-right: 25px;
     white-space: nowrap;
     color: #999999;
+    border-right: 1px solid #dddddd;
+}
+.introduce-seven{
+    padding-left: 30px;
 }
 .page-footer{
     display: flex;
