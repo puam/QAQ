@@ -37,7 +37,7 @@ body{
 .background{
     width: 100%;
     height: 260px;
-    background-image: url("image/task4-2.png");
+    background-image: url("../task-7/image/task4-2.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
@@ -332,5 +332,5 @@ body{
     color: white;
 }
 a{
-    text-decoration: none;
+        text-decoration: none;
 }

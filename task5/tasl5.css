@@ -67,7 +67,7 @@ header {
     width: 100%;
     height: 60px;
     left: 10px;
-    background-image: url("image/task5-2.png");
+    background-image: url("../task-7/image/task5-2.png");
     background-position: 92%;
     background-repeat: no-repeat no-repeat;
 }
@@ -208,6 +208,7 @@ header {
 .below4 {
     width: 30px;
     height: 30px;
+
 }
 
 .below5 {
