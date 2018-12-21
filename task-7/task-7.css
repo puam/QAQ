@@ -1,0 +1,156 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.head {
+    width: 100%;
+    height: 60px;
+    background: #29bde0;
+}
+.wire-one{
+    position: absolute;
+    left: 15px;
+    top: 25px;
+}
+.wire-two{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.wire-three{
+    position: absolute;
+    left: 15px;
+    top: 5px;
+}
+.last-game{
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    background: #f0f0f0;
+}
+.game-one{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    height: 70px;
+    background-image: url("image/task-7-3.png");
+    background-repeat: no-repeat;
+    background-position: 98%;
+}
+.game-two{
+    color: #999999;
+    font-size: 1.2rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 37rem;
+    text-align: center;
+}
+.main{
+    padding-left: 50px;
+    padding-right: 50px;
+    background: #f0f0f0;
+    padding-bottom: 30px;
+}
+.ghost{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    background: #fff;
+    border-bottom: 3px solid #fde1ae;
+}
+.ghost-one{
+    color: #fde1ae;
+    font-size: 1.2rem;
+}
+.simplify {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    background: #fff;
+}
+.simplify-one{
+    width: 35rem;
+    height: 90px;
+    text-align: center;
+    background: #69d1e9;
+    line-height: 450%;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.online{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.online-one{
+    width: 77rem;
+    background: #fff;
+    text-align: center;
+    color: #999999;
+    font-size: 1rem;
+}
+.guessing-word{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    background: #fff;
+    background-image: url("image/task-7-2.png");
+    background-repeat: no-repeat;
+    background-position: 98%;
+}
+.word-one {
+    width: 35rem;
+    height: 80px;
+    text-align: center;
+    background: #69d1e9;
+    line-height: 450%;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    background: #fff;
+}
+.circle-one{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #69d1e9;
+}
+.circle-two{
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+     background: #f0f0f0;
+     margin-left: 5px;
+ }
+.circle-three{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    margin-left: 5px;
+}
+.circle-foul{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    margin-left: 5px;
+}
