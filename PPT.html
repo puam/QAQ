@@ -38,7 +38,8 @@
 <div class="reveal default center" role="application" data-transition-speed="slow" data-background-transition="fade">
     <div class="slides" style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.756);">
         <section class="past" style="top: 158px; display: none;" hidden="" aria-hidden="true">
-            <h3>如何理解盒模型及其content、padding、border、margin？</h3>
+            <h3>
+                如何理解盒模型及其content、padding、border、margin？</h3>
             <p>分享人：刘超</p>
         </section>
         <section class="past" style="top: 3px; display: block;" hidden="" aria-hidden="true">
@@ -53,95 +54,111 @@
             <p>8.更多讨论</p>
         </section>
         <section class="past" style="top: 267px; display: block;" hidden="" aria-hidden="true">
-            <h3>盒子模型的概念</h3>
-            <p>盒子模型就是在网页设计中经常用到的CSS技术所使用的一种思维模型</p>
+            <h3>1.背景介绍</h3>
         </section>
         <section class="stack present" style="top: 0px; display: block;" data-previous-indexv="1">
-            <h3>概念图</h3>
-            <img src="PPT/box-model (1).gif" height="289" width="536"/></section>
+            <h3>盒子模型</h3>
+            <img src="PPT/box-model (1).gif" height="289" width="536"/>
+        </section>
         <section class="past" style="top: 267px; display: block;" hidden="" aria-hidden="true">
             <section><p>所有HTML元素可以看作盒子，在CSS中，"box model"这一术语是用来设计和布局时使用。</p>
                 <p>CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距，边框，填充，和实际内容。</p>
-            <p>盒模型允许我们在其它元素和周围元素边框之间的空间放置元素。</p></section>
-            <section><p>Margin(外边距) - 清除边框外的区域，外边距是透明的。</p>
-                <p>Border(边框) - 围绕在内边距和内容外的边框。</p>
-                <p>Padding(内边距) - 清除内容周围的区域，内边距是透明的。</p>
-                <p> Content(内容) - 盒子的内容，显示文本和图像。</p>
-                <img src="PPT/timg.jpg" height="450" width="750"/></p></section>
+                <p>盒模型允许我们在其它元素和周围元素边框之间的空间放置元素。</p>
+            </section>
+            <section><p>Margin(外边距) 清除边框外的区域，外边距是透明的。</p>
+                <p>Border(边框)  围绕在内边距和内容外的边框。</p>
+                <p>Padding(内边距)  清除内容周围的区域，内边距是透明的。</p>
+                <p>Content(内容)  盒子的内容，显示文本和图像。</p>
+            </section>
+            <section><img src="PPT/timg.jpg" height="600" width="600"/></section>
         </section>
         <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
             <h3>2.知识剖析</h3>
         </section>
         <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
-            <section><p>1、计算盒子模型总元素的宽高。</p></section>
+            <section><p>计算盒子模型总元素的宽高。</p>
+                <p>假设一个盒子模型的？</p>
+                <p>width:200px</p>
+                <p>heigh:40px</p>
+                <p>margin-:20px(左右)</p>
+                <p>padding：20px（左右）</p>
+                <p>border:5px</p>
+            </section>
             <section>
-                <p>width：200px</p>
-                <p>height：40px</p>
-                <P>margin：20px（左右）</P>
-                <p>padding：30px（左右）</p>
-                <p>border：10px(左右)</p>
-                <p>盒子模型总宽度=margin（左右）+border（左右）+padding（左右）+width</p>
+                <p>盒子模型的总元素宽度为：外边距（左右）+边框（左右）+内边距（左右）+宽度。</p>
+                <p>盒子模型的总元素宽度为：外边距（上下）+边框（上下）+内边距（上下）+高度。</p>
             </section>
         </section>
         <section style="text-align: left; top: 330px; display: none;" hidden="" aria-hidden="true" class="stack future">
             <section style="text-align: center; top: 330px; display: none;"><h3>3.常见问题</h3></section>
         </section>
         <section>
-            <p>1、什么时候用margin？</p>
-            <p>2、什么时候用padding？</p>
-            <p>3、边框样式如何设置？</p>
-            <p>4、什么是margin折叠？</p>
+            <p>1、什么是margin重叠？</p>
+            <p>2、重叠区域如何计算？</p>
+            <p>3、margin与padding之间的区别？</p>
+            <p>4、关于border的样式？</p>
         </section>
         <section style="text-align: left; top: 330px; display: none;" hidden="" aria-hidden="true" class="stack future">
-            <section style="text-align: center; top: 330px; display: none;"><h3>4 解决问题</h3></section>
-
+            <section style="text-align: center; top: 330px; display: none;"><h3>4 解决方案</h3></section>
         </section>
-        <section><p>margin属性定义了元素边框外部的空白区域，可以影响元素与元素之间的距离。</p>
-                 <p>当我们需要在border外面添加空白的时候需要用到margin。</p>
-                 <p>当我们需要负值布局得时候，可以使用margin。</p>
-                 <p>当盒子模型里面的内容与空白区域挨得太近的时候，我们可以用padding，增加元素容器的可视区域。</p>
-                 <p>外边距折叠，指的是两个毗邻或多个盒子的外边距合并为一个外边距</p>
-                 <p>只有垂直方向的外边距才可以被折叠</p>
+        <section><p>margin重叠的意思是，有两个及以上的盒子模型</p>
+            <p>盒子模型与盒子模型之间的边距，发生叠加，形成一个边距</p>
+            <p>重叠只会发生在盒子垂直的情况下</p>
+        </section>
+        <section>
+            <p>解决方法</p>
+            <p>1.外层padding</p>
+            <p>2.透明边框border:1pxsolidtransparent;</p>
+            <p>3.绝对定位postion:absolute:</p>
+        </section>
+        <section>
+            <p>重叠区域计算</p>
+            <p>如果重叠区域两个边距为正值，选择数值较大的那个</p>
+            <p>如果margin值，一正一负值，加减之后计算。</p>
+            <p>如果margin值为两个负值的话，选择大的那个</p>
+        </section>
+        <section>
+            <p>margin与padding之间的区别</p>
+            <p>margin与padding的语法一致</p>
+            <p>margin可以设置负值，能帮我们完成好多布局样式</p>
+            <p>margin指的是盒子模型外的边距，决定了元素与边框外的属性</p>
+            <p>padding指的是盒子模型里面内容与边框之间的属性。</p>
+            <p>padding可以设置背景颜色。margin不行</p>
         </section>
         <section style="text-align: left; top: 330px; display: none;" hidden="" aria-hidden="true" class="stack future">
             <section style="text-align: center; top: 330px; display: none;"><h3>5.编码实战</h3>
                 <a href="../demo.html"><h3>demo</h3></a></section>
         </section>
         <section><p>div class="row"></p>
-            <p>border-top:1px solid #000</p>
-            <p>border-bottom:15px solid :red,</p>
-            <p>border-color:#000</p>
+            <p>给边框设置样式</p>
+            <p>border-bottom:1px solid #000（设置一个宽度为1像素的黑色下边框）</p>
+            <p>border-top:3px dashed #000(设置为一个宽慰为3像素的虚线上边框)</p>
+            <p>border-right:1px solid #000(设置一个宽度为1像素的黑色实线边框)</p>
         </section>
+
         <section hidden="" aria-hidden="true" class="stack future" style="top: 330px; display: none;">
             <section style="top: 330px; display: none;">
-                <h3 style="text-align: center">6.扩展思考.</h3>
-                <section><p>css可以做出什么形状？</p>
-                    <p> 通过盒子模型的大小以及边框里面的圆角属性我们可以很多有趣的形状</p>
-                </section>
-                <section>
-                    <p>把高度与宽度设置成一样就可以得出一个正方形</p>
-                    <p>border-radius: 50%;设置圆角属性为50%</p>
-                    <p>就可以得出圆形</p>
-                </section>
+                <h3 style="text-align: center">6.扩展思考</h3>
+                <section><p>css 我们可以用边框设置其他特殊的形状吗？</p></section>
             </section>
-        </section>
-        <section class="past" style="top: 267px; display: block;" hidden="" aria-hidden="true">
-        <section hidden="" aria-hidden="true" class="stack future" style="top: 330px; display: none;">
             <section style="top: 330px; display: none;">
-
-
-                </code></pre>
-
-
+                <h3 style="text-align: center">6.用圆角属性制作圆形</h3>
+                <section>
+                    <p> width: 50px;</p>
+                    <p> height: 50px;</p>
+                    <p>border-radius: 50px;</p>
+                    <p>background-color: red;</p>
+                    <p> margin-left: 50px;</p>
+                    <img src="ui图/img/ppt-1.png" height="200" width="200"/></section>
             </section>
         </section>
         <section style="text-align: left; top: 330px; display: none;" hidden="" aria-hidden="true" class="future">
             <h3>7.参考文献</h3>
-            <p>参考：<a href="http://www.runoob.com/css/css-boxmodel.html">菜鸟教程：盒子模型</a></p>
+            <p>参考：<a href="http://www.runoob.com/?s=%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B">盒子模型</a></p>
         </section>
         <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
             <h3>8 更多讨论</h3>
-            <section><p>1.盒子模型中没有继承的属性有哪些？</p><p>2，块级元素可被继承的元素有哪些？</p></section>
+            <section><p>1.css边框还能设置什么样的形状</p></section>
         </section>
         <!--<section style="text-align: left; top: 330px; display: none;" hidden="" aria-hidden="true" class="future">-->
         <!--<p>2333333</p>-->
