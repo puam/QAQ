@@ -23,15 +23,27 @@ body{
 .iOcn{
     margin-right: 15px;
 }
-.hint {
+.hint{
     height: 60px;
     background: #b9e9f5;
-    margin: 0;
-    padding-left: 30px;
-    line-height: 320%;
-    background-image: url("image/task-7-7.png");
-    background-repeat: no-repeat;
-    background-position: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hint-one{
+    margin-left: 30px;
+    font-size: 1.1rem;
+}
+.hint-two{
+    margin-right: 15px;
+}
+audio{
+    position: absolute;
+    right: 0px;
+    top: 63px;
+    width: 70px;
+    height: 50px;
+    opacity: 0;
 }
 .Triangle{
     background: #29bde0;
@@ -45,7 +57,6 @@ body{
     margin-left: 40px;
 }
 .inform{
-    height: 40px;
     background: #29bde0;
 }
 .inform-one{
@@ -55,42 +66,66 @@ body{
     line-height: 200%;
 }
 .page{
+    padding: 30px 30px 30px 30px;
     background: #29bde0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 20px 20px 20px;
+    justify-content: space-around;
 }
 .people{
-    width: 22vw;
-    height: 16vw;
-    background:#f5c97b ;
-    font-size: 2.5vw;
-    text-align: center;
-    line-height: 600%;
-    border-top: 3px solid #ffffff;
-    border-right: 3px solid #ffffff;
-    border-left: 3px solid #ffffff;
+    width: 18vw;
+    height: 14vw;
+    background: #f5c97b;
+    font-size: 3vw;
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    border-right: 3px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
 }
-.figure{
-    width: 22vw;
-    height: 8vw;
+.number {
+    width: 18vw;
+    height: 5vw;
     background: #83b09a;
-    font-size: 2.5vw;
-    line-height: 270%;
+    border-bottom: 3px solid #fff;
+    border-left: 3px solid #fff;
+    border-right: 3px solid #fff;
+    font-size: 2vw;
     color: #fff;
-    text-align: center;
-    border-bottom: 3px solid #ffffff;
-    border-left: 3px solid #ffffff;
-    border-right: 3px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.operation{
+.control{
     background-image: url("image/img.png");
     background-repeat: no-repeat;
-    height: 5vw;
+    background-position: 100% 100%;
+    height: 4vw;
     background-size: 100% 100%;
     display: none;
+    margin-bottom: -60px;
 }
-.figure:hover +.operation{
+.number:hover+.control{
     display: block;
+}
+.vote{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 10vw;
+    background: #29bde0;
+    border-top: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vote-one{
+    width: 65vw;
+    background: #fbb435;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vw;
+    font-size: 1rem;
 }
