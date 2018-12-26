@@ -6,7 +6,7 @@ body{
     margin: 0;
     padding: 0;
 }
-.heaD{
+.home-page{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,6 +22,9 @@ body{
 }
 .iOcn{
     margin-right: 15px;
+}
+.prompts{
+    background: #29bde0;
 }
 .hint{
     height: 60px;
@@ -57,75 +60,72 @@ audio{
     margin-left: 40px;
 }
 .inform{
-    background: #29bde0;
-}
-.inform-one{
     margin-left: 42px;
     color: #fff;
     font-size: 1rem;
     line-height: 200%;
+    height: 40px;
 }
-.page{
-    padding: 30px 30px 30px 30px;
-    background: #29bde0;
+.layout{
     display: flex;
     justify-content: space-around;
+    padding: 20px 20px 20px 20px;
+}
+.entirety{
+    width: 18vw;
+    height: 20vw;
+    margin-bottom: 50px;
 }
 .people{
-    width: 18vw;
-    height: 14vw;
+    height: 12vw;
     background: #f5c97b;
-    font-size: 3vw;
-    border-top: 3px solid #fff;
-    border-left: 3px solid #fff;
-    border-right: 3px solid #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
+    border-left: 3px solid #fff;
+    border-right: 3px solid #fff;
+    border-top: 3px solid #fff;
+    font-size: 2vw;
 }
-.number {
-    width: 18vw;
-    height: 5vw;
+.number{
+    height: 4vw;
     background: #83b09a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-bottom: 3px solid #fff;
     border-left: 3px solid #fff;
     border-right: 3px solid #fff;
-    font-size: 2vw;
+    font-size: 1.5vw;
     color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .control{
     background-image: url("image/img.png");
     background-repeat: no-repeat;
-    background-position: 100% 100%;
     height: 4vw;
     background-size: 100% 100%;
     display: none;
-    margin-bottom: -60px;
+    margin-top: 2vw;
 }
-.number:hover+.control{
+.box:hover+.control{
     display: block;
 }
 .vote{
+    width: 100vw;
+    height: 8vw;
     position: fixed;
     bottom: 0;
-    width: 100vw;
-    height: 10vw;
     background: #29bde0;
-    border-top: 1px solid #fff;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    border-top: 1px solid #fff;
 }
 .vote-one{
-    width: 65vw;
-    background: #fbb435;
+    width: 60vw;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 5vw;
-    font-size: 1rem;
+    background: #fbb435;
 }
