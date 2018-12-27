@@ -1,0 +1,113 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.hEad{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #29bde0;
+    color: #fff;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #fff;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    white-space: nowrap;
+    top: 0;
+}
+.home{
+    margin-left: 10px;
+}
+.exclaim{
+    margin-right: 10px;
+}
+.box{
+    width: 100%;
+    height: 60px;
+}
+.main{
+    background: #29bde0;
+}
+.game-victory{
+    display: flex;
+    justify-content: center;
+}
+.appreciates{
+    font-size: 1.5rem;
+    color: #ffc865;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.time {
+    color: #fff;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 1.1rem;
+}
+.day{
+    background: #fff;
+    border-bottom: 3px solid #ddd;
+}
+.day-one{
+    margin-left: 20%;
+    margin-right: 50%;
+    font-size: 1.2rem;
+    color: #515151;
+}
+.day-two{
+    color: #c7c7c7;
+}
+.night{
+    color: #a6a6a6;
+    margin-left: 20%;
+}
+.daytime{
+    margin-left: 20%;
+    color: #a6a6a6;
+}
+.foot{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    background: rgba(153, 223, 240, 0.5);
+}
+.rmrematch{
+    margin-left: 5%;
+    background: #f66f6f;
+    width: 42%;
+    height: 40px;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.share{
+    margin-right: 5%;
+    width: 42%;
+    height: 40px;
+    background: #fbb435;
+    font-size: 1.3rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.box-one {
+    width: 100%;
+    height: 60px;
+}
+a{
+  text-decoration: none;
+    color: #fff;
+}
