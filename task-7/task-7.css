@@ -105,9 +105,19 @@ body{
     justify-content: center;
     height: 90px;
     background: #fff;
+}
+#logo{
     background-image: url("image/task-7-2.png");
     background-repeat: no-repeat;
     background-position: 98%;
+    position: absolute;
+    right: 60px;
+}
+#logo a{
+    display: block;
+    width: 40px;
+    height: 60px;
+    cursor: hand;
 }
 .word-one {
     width: 35rem;

@@ -47,6 +47,7 @@ audio{
     width: 70px;
     height: 50px;
     opacity: 0;
+    cursor: pointer;
 }
 .Triangle{
     background: #29bde0;
@@ -76,6 +77,7 @@ audio{
     height: 20vw;
     margin-bottom: 120px;
     margin-top: 15px;
+    cursor: pointer;
 }
 .people{
     height: 12vw;
@@ -129,4 +131,9 @@ audio{
     justify-content: center;
     height: 5vw;
     background: #fbb435;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: #fff;
 }
