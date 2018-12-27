@@ -90,6 +90,7 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    cursor: pointer;
 }
 .share{
     margin-right: 5%;
