@@ -142,6 +142,7 @@ a{
     height: 20px;
     border-radius: 50%;
     background: #f0f0f0;
+    margin-top: -5px;
 }
 .circle-two{
      width: 20px;
@@ -149,6 +150,7 @@ a{
      border-radius: 50%;
      margin-left: 10px;
     background: #f0f0f0;
+    margin-top: -5px;
  }
 .circle-three{
     width: 20px;
@@ -156,6 +158,7 @@ a{
     border-radius: 50%;
     margin-left: 10px;
     background: #f0f0f0;
+    margin-top: -5px;
 }
 .circle-foul{
     width: 20px;
@@ -163,6 +166,7 @@ a{
     border-radius: 50%;
     margin-left: 10px;
     background: #f0f0f0;
+    margin-top: -5px;
 }
 .circle-one:hover{
     background: #29bde0;
