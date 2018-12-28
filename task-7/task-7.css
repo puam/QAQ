@@ -51,6 +51,7 @@ body{
     height: 50px;
     line-height: 280%;
     color: #fff;
+    cursor: pointer;
 }
 a{
     text-decoration: none;
@@ -75,7 +76,6 @@ a{
     background-image: url("image/task-7-2.png");
     background-repeat: no-repeat;
     background-position: 100%;
-    cursor: pointer;
 }
 .wire-one{
     position: absolute;
@@ -87,13 +87,11 @@ a{
     position: absolute;
     left: 15px;
     top: 15px;
-    cursor: pointer;
 }
 .wire-three{
     position: absolute;
     left: 15px;
     top: 5px;
-    cursor: pointer;
 }
 .last-game{
     padding-top: 20px;

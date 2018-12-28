@@ -44,12 +44,12 @@ body{
 }
 audio{
     position: absolute;
-    right: 0px;
+    right: 15px;
     top: 63px;
-    width: 70px;
-    height: 50px;
+    width: 90px;
     opacity: 0;
     cursor: pointer;
+    transform: rotate(180deg);
 }
 .Triangle{
     background: #29bde0;
