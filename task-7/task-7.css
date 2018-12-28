@@ -5,26 +5,95 @@ html{
 body{
     margin: 0;
     padding: 0;
+    background: #f0f0f0;
 }
 .head {
     width: 100%;
     height: 60px;
     background: #29bde0;
 }
+.go-one{
+    margin: 30px 30px 30px 30px;
+    background: #fff;
+    font-size: 1.3rem;
+    height: 60px;
+    text-align: center;
+    line-height: 300%;
+    color: #b3b3b3;
+    background-image: url("image/task-7-3.png");
+    background-repeat: no-repeat;
+    background-position: 98%;
+}
+.ghost{
+    margin-left: 30px;
+    margin-right:30px;
+    background: #fff;
+    line-height: 300%;
+    height: 60px;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #fbb435;
+    border-bottom: 1.5px solid #fbb435;
+}
+.versions{
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 70px;
+    background: #fff;
+    padding-top: 20px;
+}
+.versions-one{
+    margin-left: 45px;
+    margin-right: 45px;
+    background: #69d1e9;
+    text-align: center;
+    font-size: 1.1rem;
+    height: 50px;
+    line-height: 280%;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.user{
+    margin-left: 30px;
+    margin-right: 30px;
+    background: #fff;
+    margin-top: 0;
+    text-align: center;
+    color: #9a9a9a;
+    margin-bottom: 0;
+}
+
+.versions-z{
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 70px;
+    background: #fff;
+    padding-top: 20px;
+    background-image: url("image/task-7-2.png");
+    background-repeat: no-repeat;
+    background-position: 100%;
+    cursor: pointer;
+}
 .wire-one{
     position: absolute;
     left: 15px;
     top: 25px;
+    cursor: pointer;
 }
 .wire-two{
     position: absolute;
     left: 15px;
     top: 15px;
+    cursor: pointer;
 }
 .wire-three{
     position: absolute;
     left: 15px;
     top: 5px;
+    cursor: pointer;
 }
 .last-game{
     padding-top: 20px;
@@ -50,85 +119,7 @@ body{
     margin-right: 20px;
     width: 37rem;
     text-align: center;
-}
-.main{
-    padding-left: 50px;
-    padding-right: 50px;
-    background: #f0f0f0;
-    padding-bottom: 20px;
-}
-.ghost{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
     background: #fff;
-    border-bottom: 3px solid #fde1ae;
-}
-.ghost-one{
-    color: #fde1ae;
-    font-size: 1.2rem;
-}
-.simplify {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 90px;
-    background: #fff;
-}
-.simplify-one{
-    width: 35rem;
-    height: 60px;
-    text-align: center;
-    background: #69d1e9;
-    line-height: 320%;
-    font-size: 1.2rem;
-    color: #fff;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-.online{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.online-one{
-    width: 79rem;
-    background: #fff;
-    text-align: center;
-    color: #999999;
-    font-size: 1rem;
-}
-.guessing-word{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 90px;
-    background: #fff;
-}
-#logo{
-    background-image: url("image/task-7-2.png");
-    background-repeat: no-repeat;
-    background-position: 98%;
-    position: absolute;
-    right: 60px;
-}
-#logo a{
-    display: block;
-    width: 40px;
-    height: 60px;
-    cursor: hand;
-}
-.word-one {
-    width: 35rem;
-    height: 60px;
-    text-align: center;
-    background: #69d1e9;
-    line-height: 320%;
-    font-size: 1.2rem;
-    color: #fff;
-    margin-left: 50px;
-    margin-right: 50px;
 }
 .circle{
     display: flex;

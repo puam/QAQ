@@ -14,7 +14,8 @@ body{
     height: 60px;
 }
 .Icon{
-    padding-left: 15px;
+    margin-left: 15px;
+    cursor: pointer;
 }
 .vote{
     font-size: 1.3rem;
@@ -22,6 +23,7 @@ body{
 }
 .iOcn{
     margin-right: 15px;
+    cursor: pointer;
 }
 .prompts{
     background: #29bde0;
@@ -126,12 +128,12 @@ audio{
 }
 .vote-one{
     width: 60vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 5vw;
+    text-align: center;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
     background: #fbb435;
     cursor: pointer;
+    font-size: 2vw;
 }
 a{
     text-decoration: none;

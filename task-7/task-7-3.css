@@ -22,9 +22,11 @@ body{
 }
 .home{
     margin-left: 10px;
+    cursor: pointer;
 }
 .exclaim{
     margin-right: 10px;
+    cursor: pointer;
 }
 .box{
     width: 100%;
@@ -36,6 +38,9 @@ body{
 .game-victory{
     display: flex;
     justify-content: center;
+}
+.game{
+    margin-top: 2%;
 }
 .appreciates{
     font-size: 1.5rem;
@@ -54,21 +59,23 @@ body{
     border-bottom: 3px solid #ddd;
 }
 .day-one{
-    margin-left: 20%;
-    margin-right: 50%;
-    font-size: 1.2rem;
-    color: #515151;
+    display: flex;
+    justify-content: space-between;
 }
 .day-two{
+    margin-left: 20%;
+    color: #515151;
+    font-size: 1.2rem;
+    margin-top: .5%;
+}
+.day-three{
     color: #c7c7c7;
+    margin-top: 1%;
+    margin-right: 20%;
 }
-.night{
-    color: #a6a6a6;
+.day-foul{
     margin-left: 20%;
-}
-.daytime{
-    margin-left: 20%;
-    color: #a6a6a6;
+    color: #c7c7c7;
 }
 .foot{
     position: fixed;
@@ -113,4 +120,5 @@ body{
 a{
   text-decoration: none;
     color: #fff;
+
 }
