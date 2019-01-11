@@ -1,0 +1,196 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+}
+.Head{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.serve{
+    color: #42b683;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.3em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    margin-right: 1.6%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.Logo{
+   margin-right: .2rem;
+    margin-left: .2rem;
+}
+.register{
+    display: flex;
+    justify-content: flex-end;
+    color: #42b683;
+}
+@media screen and (max-width: 992px){
+    .Head{
+        display: none;
+    }
+}
+@media screen and (min-width: 992px) {
+    .register {
+        display: none;
+    }
+}
+.navbar{
+    background: #29b078;
+}
+.nav-item:hover{
+    border-bottom: 3px solid#fff;
+    margin-bottom: -8px;
+}
+.nav-item{
+    border-bottom: 3px solid #29b078;
+    margin-bottom: -8px;
+}
+.carousel-indicators li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0);
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.efficient-one{
+    border-left: 1px dashed #ddd;
+}
+.roundness{
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    line-height: 47px;
+}
+.col {
+    display: flex;
+    text-align: center;
+    font-size: 1px;
+    justify-content: space-between;
+    align-items: center;
+    color: #42b683;
+}
+.top {
+    white-space: normal;
+    width: 10rem;
+    margin-top: 1.5rem;
+    color: #999999;
+}
+.box-senver{
+    width: 32px;
+    height: 30px;
+}
+.card{
+    flex-wrap: nowrap;
+    border: none;
+    background: #fafafa;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+.distance{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #5d5d5d;
+}
+.card-body{
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid#f6f6f6;
+    background: #fff;
+    color: #cdcdcd;
+}
+.rotundity-one{
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.rotundity-one:hover{
+    background: #29b078;
+}
+.cooperation{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+.box1{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    background: #fff;
+    align-items: center;
+    margin: 10px 10px 10px 10px;
+}
+.box1:hover{
+    border: 3px solid #f6f6f6;
+    box-shadow: 1px 1px 3px #ddd;
+}
+.box2{
+    display: flex;
+    justify-content: space-around;
+}
+.box3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1px;
+    padding-bottom: 5px;
+}
+.int{
+    width: 5px;
+    height: 5px;
+    background: #999;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.text-color{
+    color: #a1a1a1;
+    border-bottom: 1px solid #fff;
+    font-size: .5rem;
+}
+.text-color:hover{
+    border-bottom: 1px solid #999;
+}
+footer{
+    background:#26a26f ;
+}
+.text-hue {
+    color: white;
+}
+.foot-text{
+    color: #fff;
+}
+.teamwork{
+    padding-top: 3.5rem;
+}
+.Text:hover{
+    border-bottom: 1px solid #fff;
+}
+
+.tExt:hover{
+    border-bottom: 1px solid #fff;
+}
+.investigate{
+    border-top: 2px solid #32c086;
+}

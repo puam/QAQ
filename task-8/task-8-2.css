@@ -1,0 +1,150 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+.body{
+    margin: 0;
+    padding: 0;
+}
+.top-text{
+    color: #42b683;
+    font-size: .9rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.logo{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.Logo{
+    margin-left: .2rem;
+}
+.head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 992px){
+    .head{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .text-hidden{
+        display: none;
+    }
+}
+.text-hidden{
+    text-align: right;
+    color: #42b683;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.navbar{
+    background: #29b078;
+}
+.nav-item:hover{
+    border-bottom: 3px solid#fff;
+    margin-bottom: -8px;
+}
+
+.text-color:hover{
+    border-bottom: 1px solid #29b078;
+}
+.nav-item{
+    border-bottom: 3px solid #29b078;
+    margin-bottom: -8px;
+}
+.text-color{
+    color: #29b078;
+}
+li{
+    list-style: none;
+}
+.background-main{
+    background: #fafafa;
+    padding-bottom: 7rem;
+}
+.content{
+    border: 1px solid #ededed;
+    height: 35rem;
+    box-shadow: 3px 3px 3px  #ededed;
+}
+.colour{
+    border-bottom: 1px solid #e6e6e6;
+}
+.list{
+    display: flex;
+    justify-content: center;
+}
+.enterprise{
+    display: flex;
+    align-items: center;
+    color: #29b078;
+}
+.circle{
+    width: 12px;
+    height: 12px;
+    border: 1px solid #ff7628;
+    border-radius: 50%;
+}
+.enterprise:hover .circle{
+    background: #ff650e;
+}
+.enterprise:hover .ml-2{
+    color: #ff650e;
+}
+.interval{
+    width: 100%;
+    height: 2rem;
+    display: none;
+}
+@media screen and (max-width: 768px){
+    .interval{
+        display: block;
+    }
+
+}
+.knowledge{
+    box-shadow: 3px 3px 3px  #ededed;
+}
+.potato{
+    background: #fff;
+    border-bottom: 1px solid #e6e6e6;
+}
+.photo{
+    padding: 1.5rem .5rem .5rem 2.5rem;
+
+}
+.text-adjustment{
+    padding: 1.5rem 1rem 1rem 1rem;
+    font-size: .9rem;
+    color: #d0d0d0;
+}
+.overall-text{
+    padding: 2rem 1rem 2rem 4rem;
+    font-size: .9rem;
+    margin-bottom: 0;
+    color: #d0d0d0;
+}
+.background{
+    background: #29b078;
+}
+.text-foot{
+    color: white;
+}
+.text-change:hover{
+    border-bottom: 1px solid #fff;
+}
+.text-alteration:hover{
+    border-bottom: 1px solid #fff;
+}
+.clearing-margin{
+    margin-bottom: 0;
+}
+.background{
+    background: #29b078;
+    border-top: 2px solid #32c086;
+    color: #fff;
+}
