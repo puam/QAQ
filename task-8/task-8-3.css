@@ -57,16 +57,16 @@ body{
 .breadcrumb{
     background: #fafafa;
     text-decoration: none;
-    border-bottom: 1px solid #edf1f2;
+    border-bottom: 1px solid #d0d6d9;
     border-top: 1px solid #d0d6d9;
     cursor: pointer;
 }
-.breadcrumb-item:hover a{
+.link-one:hover {
     background: #29b078;
     color: white;
     text-decoration: none;
 }
-.link-one:hover {
+.link-text:hover {
     background: #29b078;
     color: white;
 }
@@ -75,12 +75,17 @@ body{
 }
 .font-text{
     font-weight: bold;
-    padding: 1rem 0 2rem 0;
-    margin-bottom: 0;
+    padding: .5rem 0 1.5rem 0;
+    border-bottom: 1px solid#d0d6d9;
+    margin-bottom: 1.5rem;
 
 }
 #test> .breadcrumb-item:before{
     content: "";
+}
+.around{
+    padding-left: 0;
+    padding-right: 0;
 }
 .web-introduce{
     margin-bottom: 2rem;
@@ -211,26 +216,6 @@ body{
     margin-bottom: 0;
     color: #d0d0d0;
 }
-.background{
-    background: #29b078;
-}
-.text-foot{
-    color: white;
-}
-.text-change:hover{
-    border-bottom: 1px solid #fff;
-}
-.text-alteration:hover{
-    border-bottom: 1px solid #fff;
-}
-.clearing-margin{
-    margin-bottom: 0;
-}
-.background{
-    background: #29b078;
-    border-top: 2px solid #32c086;
-    color: #fff;
-}
 .none-text{
     position: absolute;
     color: white;
@@ -258,4 +243,55 @@ body{
 }
 .none-text:hover .transition{
     transform: rotate(360deg);
+}
+.foot-color{
+    background: #29b078;
+}
+.foot-text{
+    color: #fff;
+    margin-top: .8rem;
+    margin-bottom: .8rem;
+}
+.foot-Text{
+    margin-top: .8rem;
+    opacity: 0;
+    margin-bottom: .8rem;
+}
+.foot-TExt{
+    margin-top: .8rem;
+    margin-bottom: .8rem;
+    color: white;
+}
+.foot-TEXt{
+    margin-top: .8rem;
+    margin-bottom: 5px;
+    color: white;
+}
+@media screen and (max-width: 768px){
+    .foot-Text{
+        display: none;
+    }
+}
+.foot-Color{
+    background: #29b078;
+    border-top: 2px solid #26a26f;;
+}
+.clearing-margin{
+    margin-bottom: 0;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: white;
+}
+.foot-colors:hover{
+    border-bottom: 1px solid #fff;
+}
+.foot-Colors:hover{
+    border-bottom: 1px solid #fff;
+}
+.foot-Colors{
+    font-size: 15px;
+}
+.foot-colors{
+    font-size: 15px;
 }

@@ -81,6 +81,9 @@ body{
 .image-box{
     height: 65px;
 }
+.number-color{
+    color: #42b683;
+}
 .headline{
     margin-bottom: 2rem;
     text-align: center;
@@ -155,6 +158,8 @@ body{
     background: #fff;
     align-items: center;
     margin: 10px 10px 10px 10px;
+    border: 3px solid #fff;
+    box-shadow: 1px 1px 3px #ddd;
 }
 .box1:hover{
     border: 3px solid #f6f6f6;
@@ -165,6 +170,7 @@ body{
     align-items: center;
     padding-top: 1px;
     padding-bottom: 5px;
+    justify-content: center;
 }
 .int{
     width: 5px;
@@ -177,32 +183,60 @@ body{
     color: #a1a1a1;
     border-bottom: 1px solid #fff;
 }
+.text-none{
+    opacity: 0;
+}
 .text-color:hover{
     border-bottom: 1px solid #999;
 }
-footer{
-    background:#26a26f ;
-}
-.text-hue {
-    color: white;
+.foot-color{
+    background: #29b078;
 }
 .foot-text{
     color: #fff;
-}
-.teamwork{
-    padding-top: 3.5rem;
-}
-.Text:hover{
-    border-bottom: 1px solid #fff;
-}
-
-.tExt:hover{
-    border-bottom: 1px solid #fff;
-}
-.investigate{
-    border-top: 2px solid #32c086;
+    margin-top: .8rem;
+    margin-bottom: .8rem;
 }
 .foot-Text{
-    padding-top: 3.5rem;
+    margin-top: .8rem;
+    opacity: 0;
+    margin-bottom: .8rem;
+}
+.foot-TExt{
+    margin-top: .8rem;
+    margin-bottom: .8rem;
     color: white;
+}
+.foot-TEXt{
+    margin-top: .8rem;
+    margin-bottom: 5px;
+    color: white;
+}
+@media screen and (max-width: 768px){
+    .foot-Text{
+        display: none;
+    }
+}
+.foot-Color{
+    background: #29b078;
+    border-top: 2px solid #26a26f;;
+}
+.clearing-margin{
+    margin-bottom: 0;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: white;
+}
+.foot-colors:hover{
+    border-bottom: 1px solid #fff;
+}
+.foot-Colors:hover{
+    border-bottom: 1px solid #fff;
+}
+.foot-Colors{
+    font-size: 15px;
+}
+.foot-colors{
+    font-size: 15px;
 }
