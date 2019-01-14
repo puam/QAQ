@@ -10,22 +10,22 @@ body{
 .Head{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 15px;
 }
 .serve{
     color: #42b683;
     margin-top: 0;
     margin-bottom: 0;
     font-size: 1.3em;
-    padding-top: 5px;
-    padding-bottom: 5px;
 }
 .logo{
     display: flex;
     align-items: center;
     margin-right: 1.6%;
-    padding-top: 5px;
-    padding-bottom: 5px;
 }
 .Logo{
    margin-right: .2rem;
@@ -67,8 +67,27 @@ body{
     border-left: 1px solid #fff;
     border-bottom: 1px solid #fff;
 }
-.efficient-one{
-    border-left: 1px dashed #ddd;
+.border-none{
+    border-left: 1px solid #ddd;
+
+}
+@media screen and (max-width: 782px){
+    .border-none{
+        border: none;
+    }
+}
+.image-box{
+    height: 65px;
+}
+.headline{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.box-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
 }
 .roundness{
     width: 50px;
@@ -77,20 +96,14 @@ body{
     border: 1px solid #ddd;
     border-radius: 50%;
     line-height: 47px;
-}
-.col {
-    display: flex;
     text-align: center;
-    font-size: 1px;
-    justify-content: space-between;
-    align-items: center;
     color: #42b683;
 }
 .top {
-    white-space: normal;
-    width: 10rem;
-    margin-top: 1.5rem;
+    font-size: 14px;
     color: #999999;
+    text-align: center;
+    width: 75%;
 }
 .box-senver{
     width: 32px;
@@ -102,19 +115,18 @@ body{
     background: #fafafa;
     padding-top: 15px;
     padding-bottom: 15px;
-
 }
 .distance{
     padding-top: 1rem;
     padding-bottom: 1rem;
-    color: #5d5d5d;
+    color: #333;
 }
 .card-body{
     flex-direction: column;
     text-align: center;
     border: 1px solid#f6f6f6;
     background: #fff;
-    color: #cdcdcd;
+    color: #999999;
 }
 .rotundity-one{
     width: 20px;
@@ -146,14 +158,9 @@ body{
     border: 3px solid #f6f6f6;
     box-shadow: 1px 1px 3px #ddd;
 }
-.box2{
-    display: flex;
-    justify-content: space-around;
-}
 .box3 {
     display: flex;
     align-items: center;
-    justify-content: center;
     padding-top: 1px;
     padding-bottom: 5px;
 }
@@ -167,7 +174,6 @@ body{
 .text-color{
     color: #a1a1a1;
     border-bottom: 1px solid #fff;
-    font-size: .5rem;
 }
 .text-color:hover{
     border-bottom: 1px solid #999;
@@ -193,4 +199,8 @@ footer{
 }
 .investigate{
     border-top: 2px solid #32c086;
+}
+.foot-Text{
+    padding-top: 3.5rem;
+    color: white;
 }

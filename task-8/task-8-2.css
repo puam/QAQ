@@ -7,14 +7,7 @@ html{
     padding: 0;
 }
 .top-text{
-    color: #42b683;
-    font-size: .9rem;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-.logo{
-    padding-top: 5px;
-    padding-bottom: 5px;
+
 }
 .Logo{
     margin-left: .2rem;
@@ -23,6 +16,10 @@ html{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #42b683;
+    font-size: .9rem
 }
 @media screen and (max-width: 992px){
     .head{
@@ -104,7 +101,6 @@ li{
     .interval{
         display: block;
     }
-
 }
 .knowledge{
     box-shadow: 3px 3px 3px  #ededed;
@@ -112,6 +108,12 @@ li{
 .potato{
     background: #fff;
     border-bottom: 1px solid #e6e6e6;
+    display: flex;
+}
+@media screen and (max-width: 500px){
+    .potato{
+        flex-direction: column;
+    }
 }
 .photo{
     padding: 1.5rem .5rem .5rem 2.5rem;
@@ -120,31 +122,40 @@ li{
 .text-adjustment{
     padding: 1.5rem 1rem 1rem 1rem;
     font-size: .9rem;
-    color: #d0d0d0;
+    color: #999999;
 }
 .overall-text{
     padding: 2rem 1rem 2rem 4rem;
     font-size: .9rem;
     margin-bottom: 0;
-    color: #d0d0d0;
+    color: #999999;
 }
-.background{
+.foot-parent{
     background: #29b078;
 }
-.text-foot{
-    color: white;
-}
-.text-change:hover{
-    border-bottom: 1px solid #fff;
-}
-.text-alteration:hover{
-    border-bottom: 1px solid #fff;
-}
-.clearing-margin{
-    margin-bottom: 0;
-}
-.background{
-    background: #29b078;
-    border-top: 2px solid #32c086;
+.foot-text{
     color: #fff;
+    margin-top: 1.5rem;
+}
+.foot-Text{
+    color: #fff;
+    margin-top: 1.5rem;
+    opacity: 0;
+}
+.hover-text:hover{
+    border-bottom: 1px solid #fff;
+}
+.foot-border{
+    margin-top: 1rem;
+    border-top: 1px solid #32c086;
+}
+.foot-TExt{
+    margin-bottom: 0;
+    text-align: center;
+    color: #fff;
+}
+.foot-texT{
+    color: #fff;
+    margin-top: 1.3rem;
+    margin-bottom: 10px;
 }

@@ -9,6 +9,8 @@ body{
 .head{
     display: flex;
     justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 .logo{
     margin-right: 5px;
@@ -59,9 +61,17 @@ body{
     border-top: 1px solid #d0d6d9;
     cursor: pointer;
 }
-.breadcrumb-item:hover{
+.breadcrumb-item:hover a{
     background: #29b078;
     color: white;
+    text-decoration: none;
+}
+.link-one:hover {
+    background: #29b078;
+    color: white;
+}
+.link-text{
+    color: #333;
 }
 .font-text{
     font-weight: bold;
@@ -87,11 +97,13 @@ body{
     grid-column-start: 1;
     grid-column-end: 6;
     display: flex;
+    background-image: url("img-8/task-8-2-3.png");
+    background-repeat: no-repeat;
 }
 .item2{
     grid-column-start: 6;
     grid-column-end: 11;
-    font-size: .8rem;
+    font-size: .5rem;
     border-left: 1px solid #fff;
     margin-left: 5px;
 }
@@ -242,7 +254,6 @@ body{
     display: block;
 }
 .transition{
-    height: 25rem;
     transition: width 2s,height 2s,transform 2s;
 }
 .none-text:hover .transition{
