@@ -35,6 +35,8 @@ body{
     display: flex;
     justify-content: flex-end;
     color: #42b683;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 @media screen and (max-width: 992px){
     .Head{
