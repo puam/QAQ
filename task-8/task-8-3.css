@@ -69,6 +69,7 @@ body{
 .link-text:hover {
     background: #29b078;
     color: white;
+    text-decoration: none;
 }
 .link-text{
     color: #333;
