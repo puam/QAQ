@@ -214,35 +214,23 @@ body{
     border-bottom: 2px solid #e7e7e7;
     border-top: 2px solid #e7e7e7;
 }
-.form-check{
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+.size-forM{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
 }
 .group-form{
     display: flex;
     justify-content: center;
-    margin-left: 50px;
     margin-bottom: 10px;
     margin-top: -20px;
 }
 .group-Form{
     display: flex;
     justify-content: center;
-    margin-top:20px;
-    margin-left: 50px;
-    margin-bottom: 10px;
 }
-.group-FOrm{
-    display: flex;
-    justify-content: center;
-    margin-left: 50px;
-    margin-bottom: 10px;
-}
-
 @media screen and (max-width: 992px){
     .group-FOrm{
         margin-left: 27px;
@@ -264,7 +252,7 @@ body{
     background-repeat: no-repeat;
     background-position: 99%;
     cursor: pointer;
-    width: 120px;
+    width: 105px;
 }
 input[type="radio"]{
     display: none;
@@ -276,8 +264,8 @@ input[type="radio"]+label:before{
     display: inline-block;
     vertical-align: middle;
     margin-top: -2px;
-    margin-right: 1rem;
-    margin-left: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     border-radius: 50%;
     border: 2px solid #d7d7d7;
     background: #f8f9fb;
@@ -308,11 +296,10 @@ select{
     padding-bottom: 14px;
     align-items: center;
     justify-content: center;
-    margin-left: 60px;
 }
 .form-control-one{
     height: 25px;
-    min-width: 50px;
+    width: 80px;
 }
 .boundary{
     border: 1px solid #e8e8e8;
@@ -353,13 +340,14 @@ select{
     justify-content: center;
 }
 .bottom-Box{
-    min-width: 80px;
+    min-width: 220px;
     text-align: center;
     padding: 10px 10px 10px 10px;
     background: #e15053;
     border-radius: 7px;
     color: #fff;
     cursor: pointer;
+    /*margin-left: 40px;*/
 }
 .foot-content{
     background: #f9f9f9;
