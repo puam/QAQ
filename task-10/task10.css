@@ -9,6 +9,7 @@ body{
 .head-text{
     padding-top: 10px;
     padding-bottom: 10px;
+    white-space: nowrap;
 }
 .register{
     text-align: right;
@@ -16,13 +17,12 @@ body{
     padding-bottom: 10px;
 }
 .hover-register{
-    padding-bottom: 10px;
-    padding-top: 10px;
+   padding: 10px 4px 10px 4px;
     border-left: 1px solid #fff;
 }
 .hovers-register{
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding: 10px 4px 10px 4px;
+    border-right: 1px solid #fff;
 }
 .hover-register:hover{
     background: #fff;
@@ -35,8 +35,8 @@ body{
     padding: 10px 25px 10px 25px;
     border-left: 1px solid #fff;
 }
-@media screen and (max-width: 772px){
-    .head-text{
+@media screen and (max-width: 322px){
+    .register{
         display: none;
     }
 }
@@ -133,6 +133,14 @@ body{
     flex-wrap: wrap;
     padding-top: 2rem;
 }
+@media screen and (max-width: 768px){
+    .entirety{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 2rem;
+    }
+}
 
 .form{
     display: flex;
@@ -214,9 +222,49 @@ body{
     justify-content: center;
     width: 100%;
 }
-.form-group{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+.group-form{
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-top: -20px;
+}
+.group-Form{
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+.group-FOrm{
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 992px){
+    .group-FOrm{
+        margin-left: 27px;
+    }
+}
+.select-Box{
+    display: block;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-image: url("img10/task-10-5.png");
+    background-repeat: no-repeat;
+    background-position: 99%;
+    cursor: pointer;
+    width: 120px;
 }
 input[type="radio"]{
     display: none;
@@ -271,7 +319,6 @@ select{
 }
 .select-box{
     display: block;
-    width: 100%;
     height: calc(2.25rem + 2px);
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -285,11 +332,11 @@ select{
     background-image: url("img10/task-10-5.png");
     background-repeat: no-repeat;
     background-position: 99%;
-    margin-top: -25px;
     cursor: pointer;
+    width: 120px;
 }
 @media screen and (max-width: 992px){
-    .select-box{
+    .group-form{
         margin-top: 0;
     }
 }
@@ -333,9 +380,15 @@ select{
 .contact-way{
     display: flex;
     flex-direction: column;
+    text-align: right;
 }
 .copyright{
     background: #1d7ad9;
     color: #fff;
     font-size: 15px;
+}
+@media screen and (max-width: 992px){
+    .contact-way{
+       text-align: left;
+    }
 }
