@@ -252,7 +252,7 @@ body{
     background-repeat: no-repeat;
     background-position: 99%;
     cursor: pointer;
-    width: 105px;
+    width: 130px;
 }
 input[type="radio"]{
     display: none;
@@ -299,7 +299,7 @@ select{
 }
 .form-control-one{
     height: 25px;
-    width: 80px;
+    width: 50px;
 }
 .boundary{
     border: 1px solid #e8e8e8;
