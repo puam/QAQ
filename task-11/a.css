@@ -40,9 +40,10 @@ main .import {
   display: flex;
   background: #fff;
   padding: 10px 0 10px 0;
-  border-bottom: 1px solid #faf9f9;
+  border-bottom: 1px solid #ddd;
   border-right: 1px solid #faf9f9;
   border-left: 1px solid #faf9f9;
+  border-top: 1px solid #ddd;
 }
 main .import img {
   padding: 0 15px 0 15px;
@@ -50,6 +51,25 @@ main .import img {
   margin-right: 18px;
 }
 main .import input {
+  border: none;
+  outline: none;
+  width: 80%;
+}
+main .import1 {
+  display: flex;
+  background: #fff;
+  padding: 10px 0 10px 0;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #faf9f9;
+  border-left: 1px solid #faf9f9;
+  border-bottom: 1px solid #ddd;
+}
+main .import1 img {
+  padding: 0 15px 0 15px;
+  border-right: 1px solid #faf9f9;
+  margin-right: 18px;
+}
+main .import1 input {
   border: none;
   outline: none;
   width: 80%;
@@ -73,6 +93,7 @@ main .register {
   margin-left: 10px;
   margin-top: 5px;
   color: #a5a6a7;
+  cursor: pointer;
 }
 main .password {
   float: right;
@@ -107,6 +128,7 @@ main .instant-messaging .messaging {
   align-items: center;
   margin-left: 10px;
   margin-right: 10px;
+  cursor: pointer;
 }
 main .instant-messaging .messaging img {
   margin-bottom: 5px;
