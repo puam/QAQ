@@ -1,0 +1,208 @@
+@bule:#3fc0cd;
+@bule:@bule+#2;
+@color:#999;
+@color-text:#333;
+@variable: 3.5px;
+@colour:#e63b0e;
+@background:#5fc0cd;
+.mixed{
+  display: flex;
+  align-items: center;
+}
+.flex-align{
+  display: flex;
+  justify-content: space-between;
+}
+.border{
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+body{
+  max-width: 780px;
+  min-width: 320px;
+  margin: 0 auto 0 auto ;
+  padding: 0;
+}
+header{
+  max-width: 780px;
+  min-width: 320px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  .head{
+    background: @bule;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .box{
+      width: 32px;
+      height: 32px;
+      margin-left: 10px;
+    }
+    .top-text{
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      background: @background;
+      border-radius: 10px;
+      .workers{
+        width: 50%;
+        text-align: center;
+        padding: 10px;
+        color: #fff;
+        background: #55a8b3;
+        border-radius: 10px;
+      }
+      .nursing-workers{
+        width: 50%;
+        text-align: center;
+        padding: 10px;
+        background: #fff;
+        border-radius: 10px;
+        color: #5fc0cd;
+      }
+    }
+    .site{
+      margin-right: 10px;
+    }
+  }
+  .down-menu {
+    display: flex;
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      width: 33.3%;
+      border: 1px solid #ddd;
+      button {
+        width: 100%;
+        padding: 16px;
+        border: none;
+        background: #fff;
+        background-image: url("img-12/arrows.png");
+        background-repeat: no-repeat;
+        background-position: 92%;
+        background-size: 5% 12%;
+        color: @color;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        width: 99%;
+        background: #f9f9f9;
+        border-left: 1px solid #ddd;
+        border-right:1px solid #ddd ;
+        box-shadow: 1px 1px 1px #ddd;
+        line-height: 200%;
+        a {
+          display: block;
+          width: 100%;
+          text-align: center;
+          text-decoration: none;
+          color: @color;
+          height: 35px;
+          border-top: 1px solid #ddd;
+          border-bottom: 1px solid #ddd;
+          margin: 0;
+        }
+      }
+      button:hover + .dropdown-content {
+        display: block;
+      }
+    }
+  }
+}
+main{
+  .main-box{
+    height: 105px;
+    width: 100%;
+  }
+  .content{
+    .border;
+    .service{
+      padding: @variable;
+      .mixed;
+      img{
+        margin-left: 7px;
+      }
+      span{
+        margin-left: 7px;
+        color: @color;
+      }
+    }
+    .time{
+      padding:@variable;
+      .flex-align;
+      .hour{
+        margin-left: 30px;
+        color: @color-text;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 30%;
+        font-size: 18px;
+      }
+      .man-hour{
+        .mixed;
+        span{
+          color: @colour;
+          margin-right: 3px;
+        }
+      }
+    }
+  }
+}
+.position{
+  .mixed;
+  padding: @variable;
+  img{
+    margin-left: 7px;
+  }
+  span{
+    margin-left: 7px;
+    color: @color;
+  }
+}
+footer{
+  .foot{
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #f8fafb;
+    position: fixed;
+    bottom: 0;
+    max-width: 780px;
+    min-width: 320px;
+    width: 100%;
+  }
+}
+.home-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  span{
+    font-size: 14px;
+    text-align: center;
+    color: @bule;
+  }
+  .my-text{
+    color: @color;
+  }
+}
+.write-in{
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  background: @color;
+  justify-content: center;
+  background: @background;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
