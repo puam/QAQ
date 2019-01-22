@@ -199,4 +199,7 @@ footer .foot {
   border-radius: 50%;
   cursor: pointer;
 }
+a {
+  text-decoration: none;
+}
 /*# sourceMappingURL=task-12-1.css.map */
