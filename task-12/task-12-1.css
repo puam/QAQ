@@ -73,7 +73,7 @@ header .down-menu .dropdown {
 }
 header .down-menu .dropdown button {
   width: 100%;
-  padding: 16px;
+  padding: 10px;
   border: none;
   background: #fff;
   background-image: url("img-12/arrows.png");
@@ -109,7 +109,7 @@ header .down-menu .dropdown button:hover + .dropdown-content {
   display: block;
 }
 main .main-box {
-  height: 105px;
+  height: 92px;
   width: 100%;
 }
 main .content {
@@ -117,7 +117,7 @@ main .content {
   border-top: 1px solid #ddd;
 }
 main .content .service {
-  padding: 2.1px;
+  padding: 2.39px;
   height: 20px;
   display: flex;
   align-items: center;
@@ -130,7 +130,7 @@ main .content .service span {
   color: #999;
 }
 main .content .time {
-  padding: 2.1px;
+  padding: 2.39px;
   height: 20px;
   display: flex;
   justify-content: space-between;
@@ -152,10 +152,14 @@ main .content .time .man-hour span {
   color: #e63b0e;
   margin-right: 3px;
 }
+main .box-three {
+  width: 100%;
+  height: 70px;
+}
 .position {
   display: flex;
   align-items: center;
-  padding: 2.1px;
+  padding: 2.39px;
   height: 20px  ;
 }
 .position img {
