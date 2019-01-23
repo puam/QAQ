@@ -117,7 +117,7 @@ main .content {
   border-top: 1px solid #ddd;
 }
 main .content .service {
-  padding: 2.39px;
+  padding: 2.5px;
   height: 20px;
   display: flex;
   align-items: center;
@@ -130,7 +130,7 @@ main .content .service span {
   color: #999;
 }
 main .content .time {
-  padding: 2.39px;
+  padding: 2.5px;
   height: 20px;
   display: flex;
   justify-content: space-between;
@@ -159,7 +159,7 @@ main .box-three {
 .position {
   display: flex;
   align-items: center;
-  padding: 2.39px;
+  padding: 2.5px;
   height: 20px  ;
 }
 .position img {
