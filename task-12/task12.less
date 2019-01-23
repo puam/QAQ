@@ -25,6 +25,11 @@ header{
   display: flex;
   justify-content: space-between;
   padding: 10px 0 10px 0;
+  top: 0;
+  position: fixed;
+  max-width: 780px;
+  min-width: 320px;
+  width: 100%;
   img{
     margin-left: 5px;
     cursor: pointer;
@@ -38,37 +43,31 @@ header{
   }
 }
 main {
-  .content {
+  .content{
     background-image: url("img-12/doctor.png");
-    background-size: 100% 100%;
-    height: 300px;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 280px;
     display: flex;
-
-    .user {
-      margin-left: 1rem;
-      margin-top: 3.5rem;
+    align-items: center;
+    .user{
+      margin-left: 20px;
     }
-
-    .name {
-      position: absolute;
-      margin-top: 6rem;
-      margin-left: 11rem;
+    .photo-text {
+      margin-left: 20px;
       color: @ys_color;
-      font-size: 1.2rem;
-    }
-
-    .coordinate {
-      position: absolute;
-      margin-top: 8rem;
-      margin-left: 11rem;
-    }
-
-    .coordinate-one {
-      position: absolute;
-      margin-top: 8rem;
-      margin-left: 12.6rem;
-      color: @ys_color;
+      .name-size{
+        font-size: 1.2rem;
+      }
+      .location{
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        span{
+          margin-left: 10px;
+          font-size: 14px;
+        }
+      }
     }
   }
   .major{
@@ -132,7 +131,7 @@ main {
   .self-introduction{
     display: flex;
     align-items: center;
-    margin-bottom: 6rem;
+    margin-bottom: 8rem;
     border-bottom: 1px solid #ddd;
     span{
       margin: 1rem 0 1rem 30px;
@@ -155,10 +154,12 @@ footer{
     max-width: 780px;
     min-width: 320px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
+    padding: 10px 0 10px 0;
+    background: #fff;
     .leave-word{
-      width: 44%;
+      width: 35%;
       text-align: center;
       padding: 1rem;
       border: 1px solid #5fc0cd;
@@ -168,7 +169,7 @@ footer{
       cursor: pointer;
     }
     .telephone-connection{
-      width: 44%;
+      width: 35%;
       text-align: center;
       padding: 1rem;
       border: 1px solid #5fc0cd;

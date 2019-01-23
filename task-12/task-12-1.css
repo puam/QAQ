@@ -117,7 +117,8 @@ main .content {
   border-top: 1px solid #ddd;
 }
 main .content .service {
-  padding: 3.5px;
+  padding: 2.1px;
+  height: 20px;
   display: flex;
   align-items: center;
 }
@@ -129,7 +130,8 @@ main .content .service span {
   color: #999;
 }
 main .content .time {
-  padding: 3.5px;
+  padding: 2.1px;
+  height: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -153,7 +155,8 @@ main .content .time .man-hour span {
 .position {
   display: flex;
   align-items: center;
-  padding: 3.5px;
+  padding: 2.1px;
+  height: 20px  ;
 }
 .position img {
   margin-left: 7px;
