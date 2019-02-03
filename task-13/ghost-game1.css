@@ -1,0 +1,12 @@
+body {
+  max-width: 780px;
+  min-width: 320px;
+  padding: 0;
+  margin: 0 auto;
+}
+header {
+  height: 40px;
+  width: 100%;
+  background: #29bde0;
+}
+/*# sourceMappingURL=ghost-game1.css.map */
