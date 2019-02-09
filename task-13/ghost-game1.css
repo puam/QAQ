@@ -1,12 +1,63 @@
 body {
-  max-width: 780px;
+  margin: 0;
+}
+.max {
+  position: relative;
   min-width: 320px;
-  padding: 0;
+  max-width: 780px;
   margin: 0 auto;
 }
-header {
+header #sidemenu {
+  display: none;
+}
+header #sidemenu:checked + aside {
+  left: 0;
+}
+header #sidemenu:checked ~ #wrap {
+  padding-left: 50%;
+}
+aside {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  width: 50%;
+  transition: 0.2s ease-out;
+  background: #fff;
+}
+.left-hint {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 40px;
-  width: 100%;
-  background: #29bde0;
+  border-bottom: 2px solid #eaeaea;
+}
+.left-hint .announcement {
+  display: flex;
+  align-items: center;
+}
+.left-hint .announcement img {
+  padding-left: 20px;
+}
+.left-hint .announcement span {
+  color: #66c7e3;
+  padding-left: 40px;
+}
+#wrap {
+  margin-left: 20px;
+  padding: 10px;
+  transition: 0.2s ease-out;
+  background: #35bddf;
+}
+#wrap label {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #fff;
+  text-align: center;
+  background: #35bddf;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=ghost-game1.css.map */
