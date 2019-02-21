@@ -92,9 +92,9 @@ main .games-content {
   background: rgba(144, 215, 232, 0.5);
 }
 .game-button .to-game {
-  height: 55px;
-  line-height: 55px;
-  width: 31%;
+  height: 60px;
+  line-height: 60px;
+  width: 40%;
   margin: 0 30px;
   text-align: center;
   text-decoration: none;
@@ -105,9 +105,9 @@ main .games-content {
   background: #f66f6f;
 }
 .game-button .upload-share {
-  height: 55px;
-  line-height: 55px;
-  width: 31%;
+  height: 60px;
+  line-height: 60px;
+  width: 40%;
   margin: 0 30px;
   text-align: center;
   text-decoration: none;
@@ -116,5 +116,9 @@ main .games-content {
   color: #fff;
   border-radius: 10px;
   background: #fbb435;
+}
+.fill-one {
+  height: 90px;
+  background: #fff;
 }
 /*# sourceMappingURL=The-results-page.css.map */

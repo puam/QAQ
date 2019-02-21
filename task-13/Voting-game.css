@@ -48,12 +48,12 @@ body {
 .background-music {
   position: absolute;
   transform: rotate(180deg);
-  opacity: 0;
-  cursor: pointer;
   top: 8px;
   right: 12px;
   width: 98px;
   height: 70px;
+  opacity: 0;
+  cursor: pointer;
 }
 .reverse-triangle {
   margin-left: 60px;
@@ -125,8 +125,8 @@ body {
   width: 100%;
   height: 65px;
   text-align: center;
-  background: #29bde0;
   border-top: 3px solid #ffffff;
+  background: #29bde0;
 }
 .decision .vote-die {
   padding: 12px 35%;
