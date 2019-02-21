@@ -1,0 +1,138 @@
+body{
+  margin: 0;
+}
+.max{
+  max-width: 780px;
+  min-width: 320px;
+  margin: 0 auto;
+  background: #29bde0;
+}
+.vote{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 780px;
+  min-width: 320px;
+  width: 100%;
+  top: 0;
+  height: 50px;
+  background: #29bde0;
+  .left-menu{
+    margin-left: 15px;
+    cursor: pointer;
+  }
+  span{
+    font-size: 22px;
+    color: #fff;
+  }
+  .right-quit{
+    margin-right: 20px;
+    cursor: pointer;
+  }
+}
+.hint{
+  position: relative;
+  margin-top: 50px;
+  height: 70px;
+  background: #b9e9f5;
+  line-height: 70px;
+  color: #464646 ;
+  background-image: url("ghost-img/Play-button.png");
+  background-repeat: no-repeat;
+  background-position: 99%;
+  span{
+    padding-left: 30px;
+  }
+}
+.background-music{
+  position: absolute;
+  transform: rotate(180deg);
+  opacity: 0;
+  cursor: pointer;
+  top: 8px;
+  right: 12px;
+  width: 98px;
+  height: 70px;
+}
+.reverse-triangle{
+  margin-left: 60px;
+  .triangle{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #b9e9f5;
+  }
+}
+.clew{
+  margin-left: 60px;
+  color: #fff;
+}
+.werewolves{
+  display: flex;
+  justify-content: space-around;
+}
+.player{
+  width: 90px;
+  height: 125px;
+  .profession{
+    width: 90px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: #565656;
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    border-right: 3px solid #fff;
+    background: #f5c97b;
+    cursor: pointer;
+  }
+  .number{
+    width: 90px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    background: #83b09a;
+    border-bottom: 3px solid #fff;
+    border-left: 3px solid #fff;
+    border-right: 3px solid #fff;
+    cursor: pointer;
+  }
+  .choose{
+    display: none;
+    margin-top: 7px;
+    width: 90px;
+    height: 25px;
+    background-image: url("ghost-img/choose.png");
+    background-repeat: no-repeat;
+    background-size: 90px 25px;
+  }
+}
+.player:hover .choose{
+  display: block;
+}
+.fill{
+  height:117px;
+  background: #29bde0;
+}
+.decision{
+  position: fixed;
+  bottom: 0;
+  max-width: 780px;
+  min-width: 320px;
+  width: 100%;
+  height: 65px;
+  text-align: center;
+  background: #29bde0;
+  border-top: 3px solid #ffffff;
+  .vote-die{
+    padding: 12px 35%;
+    height: 42px;
+    line-height: 70px;
+    color: #fff;
+    background: #fbb435;
+    cursor: pointer;
+  }
+}

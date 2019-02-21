@@ -1,0 +1,117 @@
+body{
+  margin: 0;
+}
+.max{
+  max-width: 780px;
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+}
+header{
+  position: fixed;
+  max-width: 780px;
+  min-width: 320px;
+  width: 100%;
+  background: #29bde0;
+  .game-results{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    .home{
+      margin-left: 15px;
+      cursor: pointer;
+    }
+    .game-result{
+      font-size: 18px;
+      color: #fff;
+    }
+    .hint{
+      margin-right: 15px;
+      cursor: pointer;
+    }
+  }
+}
+.fill{
+  height: 60px;
+}
+main{
+  background: #29bde0;
+  .undercover-win{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  .statement{
+    text-align: center;
+    color: #ffc865;
+    font-size: 20px;
+    margin: 0 15% 0 15%;
+  }
+  .games-content{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 10px;
+    color: #e4f7fb;
+  }
+}
+.one-day{
+  height: 90px;
+  background: #fff;
+  border-bottom: 3px solid #ddd;
+  .day{
+    display: flex;
+    justify-content: space-between;
+    .time{
+      margin: 3px 0 7px 15%;
+      font-size: 17px;
+      color: #515151;
+    }
+    .time-one{
+      margin: 3px 15% 7px 0;
+      color: #d5d5d5;
+      font-size: 12px;
+    }
+  }
+}
+.poll-result{
+  display: inline-block;
+  margin: 0 0 0 15%;
+  color: #a6a6a6;
+}
+.game-button{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+  max-width: 780px;
+  min-width: 320px;
+  width: 100%;
+  height: 93px;
+  background: rgba(144,215,232,.5);
+  .to-game{
+    height: 55px;
+    line-height: 55px;
+    width: 31%;
+    margin: 0 30px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 10px;
+    background: #f66f6f;
+  }
+  .upload-share{
+    height: 55px;
+    line-height: 55px;
+    width: 31%;
+    margin: 0 30px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 10px;
+    background: #fbb435;
+  }
+}
