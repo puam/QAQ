@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.head .serve {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 17px;
+  color: #42b683;
+}
+.head .logo {
+  display: flex;
+  align-items: center;
+}
+.head .logo .Logo {
+  margin-right: 0.2rem;
+  margin-left: 0.2rem;
+}
+.register {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 0 5px;
+  color: #42b683;
+  cursor: pointer;
+}
+@media screen and (max-width: 992px) {
+  .head {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .register {
+    display: none;
+  }
+}
+/*# sourceMappingURL=jns-website.css.map */
