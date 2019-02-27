@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>修真院</title>
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="jns-website.css">
-    <link rel="stylesheet" href="component.css">
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="carousel.css">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="jns-website.css" rel="stylesheet">
+    <link href="component.css" rel="stylesheet">
+    <link href="nav.css" rel="stylesheet">
+    <link href="carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="foot.css">
 </head>
 <body>
 <header>
@@ -36,25 +37,28 @@
             <div class="row">
                 <div class="col">
                     <div class="top-nav">
-                            <a href="#">
-                                <img src="img-8/task-8-20.png" height="49" width="107"/>
-                            </a>
-                            <input type="checkbox" id="nav-menu">
-                            <div id="menu">
-                                <label id="nav-menu-control" for="nav-menu">≡</label>
-                            </div>
+                        <!--导航栏logo-->
+                        <a href="#">
+                            <img height="49" src="img-8/task-8-20.png" width="107"/>
+                        </a>
+                        <input id="nav-menu" type="checkbox">
+                        <!--导航栏控件-->
+                        <div id="menu">
+                            <label for="nav-menu" id="nav-menu-control">≡</label>
+                        </div>
+                        <!--导航栏列表-->
                         <ul class="list">
                             <li class="list-item">
-                                <a href="#">首页</a>
+                                <a class="nav-link" href="#">首页</a>
                             </li>
                             <li class="list-item">
-                                <a href="#">职业</a>
+                                <a class="nav-link" href="#">职业</a>
                             </li>
                             <li class="list-item">
-                                <a href="#">推荐</a>
+                                <a class="nav-link" href="#">推荐</a>
                             </li>
                             <li class="list-item">
-                                <a href="#">关于</a>
+                                <a class="nav-link" href="#">关于</a>
                             </li>
                         </ul>
                     </div>
@@ -62,23 +66,354 @@
             </div>
         </div>
     </div>
+    <div class="viewport">
+        <input checked id="pic1" name="slider" type="radio">
+        <input id="pic2" name="slider" type="radio">
+        <input id="pic3" name="slider" type="radio">
+        <!--轮播图图片-->
+        <div class="wrap">
+            <img alt="轮播图" src="img-website/slideshow-one.png">
+            <img alt="轮播图" src="img-website/slideshow-two.jpg">
+            <img alt="轮播图" src="img-website/slideshow-three.png">
+        </div>
+        <!--轮播图切换按钮-->
+        <div class="arrow">
+            <label class="arrowhead" for="pic1"></label>
+            <label class="arrowhead" for="pic2"></label>
+            <label class="arrowhead" for="pic3"></label>
+        </div>
+        <!--底部指示器-->
+        <div class="indicator">
+            <label class="indicator-one" for="pic1"></label>
+            <label class="indicator-one" for="pic2"></label>
+            <label class="indicator-one" for="pic3"></label>
+        </div>
+    </div>
 </header>
 <main>
-    <div class="viewport">
-        <input type="radio" name="slider" id="pic1" checked>
-        <input type="radio" name="slider" id="pic2">
-        <input type="radio" name="slider" id="pic3">
-        <div class="wrap">
-            <img src="img-website/slideshow-one.png" alt="轮播图">
-            <img src="img-website/slideshow-two.jpg" alt="轮播图">
-            <img src="img-website/slideshow-three.png" alt="轮播图">
+    <div class="bg">
+        <div class="container pt-5 pb-5">
+            <div class="row pt-3">
+                <div class=" col-lg-3 col-md-6 col-sm-12  content-box">
+                    <div class="image-box">
+                        <img height="62" src="img-8/task-8-6.png" width="43"/>
+                    </div>
+                    <h5>高效</h5>
+                    <p>将五到七年的成长时间，缩短到一到三年。</p>
+                </div>
+                <div class=" col-lg-3 col-md-6 col-sm-12 content-box">
+                    <div class="image-box">
+                        <img height="48" src="img-8/task-8-7.png" width="60"/>
+                    </div>
+                    <h5>规范</h5>
+                    <p>标准实战教程，不会走弯路</p>
+                </div>
+                <div class=" col-lg-3 col-md-6 col-sm-12  content-box">
+                    <div class="m-r-10">
+                        <div class="image-box">
+                            <img height="55" src="img-8/task-8-8.png" width="52"/>
+                        </div>
+                        <h5>人脉</h5>
+                        <p class="typeface mt-2 mb-2">同班好友，同班学长，技术大师，入学就是混入职脉圈，为以后铺平道路。</p>
+                    </div>
+                </div>
+                <div class=" col-lg-3 col-md-6 col-sm-12  content-box">
+                    <div class="box-border">
+                        <div class="online-number ">
+                            <img height="13" src="img-8/task-8-9.png" width="13"/>
+                            <span class="number-color">12400</span>
+                            <p>累计在线学习人数</p>
+                        </div>
+                        <div class="employment">
+                            <img height="13" src="img-8/task-8-9.png" width="13"/>
+                            <span class="number-color">12400</span>
+                            <p>学员已找到满意工作</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="arrow">
-            <label  for="pic1"></label>
-            <label  for="pic2"></label>
-            <label for="pic3"></label>
+        <div class="container">
+            <!--这是标题-->
+            <h4 class="headline">如何学习</h4>
+            <div class="row">
+                <div class=" col-xl-3 col-md-6 col-sm-12">
+                    <div class="d-f-j-s-a-c">
+                        <div class="roundness">1</div>
+                        <div class="learning-method"><span>匹配你现在的个人情况，寻找适合自己的岗位</span></div>
+                        <img height="30" src="img-website/left-triangle.png" width="32"/>
+                    </div>
+                </div>
+                <!--第一个结束-->
+                <div class=" col-xl-3 col-md-6 col-sm-12">
+                    <div class="d-f-j-s-a-c">
+                        <div class="roundness">2</div>
+                        <div class="learning-method"><span>了解职业前景薪金待遇、竞争压力等</span></div>
+                        <img height="30" src="img-website/left-triangle.png" width="32"/>
+                    </div>
+                </div>
+                <!--第二个结束-->
+                <div class=" col-xl-3 col-md-6 col-sm-12">
+                    <div class="d-f-j-s-a-c">
+                        <div class="roundness">3</div>
+                        <div class="learning-method"><span>掌握行内顶级技能</span></div>
+                        <img height="30" src="img-website/left-triangle.png" width="32"/>
+                    </div>
+                </div>
+                <!--第三个结束-->
+                <div class=" col-xl-3 col-md-6 col-sm-12 ">
+                    <div class="d-f-j-s-a-c">
+                        <div class="roundness">4</div>
+                        <div class="learning-method "><span>查看职业目标任务</span></div>
+                        <div class="padding-box"></div>
+                    </div>
+                </div>
+                <!--第四个结束-->
+            </div>
+            <h4 class="headline">优秀学员展示</h4>
+            <!--这是标题-->
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="character-card">
+                        <img height="108" src="img-8/task-8-14.png" width="108"/>
+                        <h5 class="counselor">技术顾问：罗大佑</h5>
+                        <p>百度技术总监：互联网基础服务领域，从事虚拟主机，云服务器，域名。
+                            曾任新网高级技术经理，负责技术研发，团队管理与建设
+                        </p>
+                    </div>
+                </div>
+                <!--卡片人物第一个结束-->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="character-card">
+                        <img height="108" src="img-8/task-8-15.png" width="108"/>
+                        <h5 class="counselor">技术顾问：罗大佑</h5>
+                        <p>百度技术总监：互联网基础服务领域，从事虚拟主机，云服务器，域名。
+                            曾任新网高级技术经理，负责技术研发，团队管理与建设
+                        </p>
+                    </div>
+                </div>
+                <!--第二个结束-->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="character-card">
+                        <img height="108" src="img-8/task-8-16.png" width="108"/>
+                        <h5 class="counselor">技术顾问：罗大佑</h5>
+                        <p>百度技术总监：互联网基础服务领域，从事虚拟主机，云服务器，域名。
+                            曾任新网高级技术经理，负责技术研发，团队管理与建设
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="character-card">
+                        <img height="108" src="img-8/task-8-17.png" width="108"/>
+                        <h5 class="counselor">技术顾问：罗大佑</h5>
+                        <p>百度技术总监：互联网基础服务领域，从事虚拟主机，云服务器，域名。
+                            曾任新网高级技术经理，负责技术研发，团队管理与建设
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="circle">
+                <div class="circle-white"></div>
+                <div class="circle-white"></div>
+                <div class="circle-white "></div>
+                <div class="circle-white"></div>
+            </div>
+            <h4 class="headline">战略合作企业</h4>
+            <div class="row">
+                <div class="col-xl col-md-6 col-sm-12">
+                    <div class="company">
+                        <img height="176" src="img-website/company-one.png" width="212"/>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-12">
+                    <div class="company">
+                        <img height="141" src="img-website/company-two.png" width="175"/>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-12">
+                    <div class="company">
+                        <img height="198" src="img-website/company-three.png" width="263"/>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-12">
+                    <div class="company">
+                        <img height="65" src="img-website/company-foul.png" width="175"/>
+                    </div>
+                </div>
+                <div class="col-xl col-md-12 col-sm-12">
+                    <div class="company">
+                        <img height="65" src="img-website/company-five.png" width="175"/>
+                    </div>
+                </div>
+            </div>
+            <h4 class="headline">友情链接</h4>
+            <div class=" row">
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">手机软件</span>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">教师招聘</span>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">找工作</span>
+                        <span class="text-none">我</span>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">教师招聘</span>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">找工作</span>
+                        <span class="text-none">我</span>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">手机软件</span>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">教师招聘</span>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">手机软件</span>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">手机软件</span>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">找工作</span>
+                        <span class="text-none">我</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">手机软件</span>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">教师招聘</span>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">找工作</span>
+                        <span class="text-none">我</span>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">教师招聘</span>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">找工作</span>
+                        <span class="text-none">我</span>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">手机软件</span>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">教师招聘</span>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">手机软件</span>
+                    </div>
+                </div>
+                <div class="col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">手机软件</span>
+                    </div>
+                </div>
+                <div class=" col-xl col-md-6 col-sm-6">
+                    <div class="blogroll">
+                        <div class="int"></div>
+                        <span class="hyperlink-text">找工作</span>
+                        <span class="text-none">我</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </main>
+<footer>
+    <div class="foot-color">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="foot-links">
+                        <p class="foot-text">技能树-改变你我</p>
+                        <div class="foot-text-none">1</div>
+                        <div class="foot-links-hover">
+                            <span class="foot-Colors">关于我们&nbsp;|</span>
+                            <span class="foot-Colors">联系我们&nbsp;|</span>
+                            <span class="foot-Colors">合作企业</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="foot-links">
+                        <p class="foot-colors">旗下网站</p>
+                        <span class="foot-Colors">草船云孵化器&nbsp;</span>
+                        <span class="foot-Colors">最强IT训练营&nbsp;</span>
+                        <div class="foot-text">
+                            <span class="foot-Colors">葡萄藤轻游戏</span>
+                            <span class="foot-Colors">桌游精灵</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 offset-md-2">
+                    <div class="foot-TEXt"><span class="foot-colors">微信公众平台</span></div>
+                    <div><img src="img-8/task-8-100.png" height="92" width="92"/></div>
+                </div>
+            </div>
+        </div>
+        <p class="clearing-margin">Copyright © 2015技能树 www.jnshu.com All Rights Reserved | 京ICP备13005880号</p>
+    </div>
+</footer>
 </body>
 </html>

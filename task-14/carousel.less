@@ -2,6 +2,15 @@
   position: relative;
   overflow: hidden;
 }
+#pic1{
+  display: none;
+}
+#pic2{
+  display: none;
+}
+#pic3{
+  display: none;
+}
 .wrap {
   position: relative;
   width: 300vw;
@@ -13,7 +22,6 @@
   height: auto;
   float: left;
 }
-
 #pic1:checked ~ .wrap {
   left: 0;
 }
@@ -23,14 +31,31 @@
 #pic3:checked ~ .wrap {
   left: -200vw;
 }
-
-.arrow label {
+.arrowhead{
   display: none;/*不显示*/
   width: 2vw;
   height: 2vw;
-  border-top: .1vw solid #fff;
-  border-right: .1vw solid #fff;
-  transform: rotate(-135deg);
+  border-top: .2vw solid #fff;
+  border-right: .2vw solid #fff;
+  cursor: pointer;
+}
+.indicator{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  top: 84%;
+  .indicator-one{
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    cursor: pointer;
+  }
+}
+.indicator-one:hover{
+  background: #ddd;
 }
 #pic1:checked ~ .arrow label:nth-of-type(3),
 #pic2:checked ~ .arrow label:nth-of-type(1),
@@ -39,6 +64,7 @@
   position: absolute;
   top: 50%;
   left: 5rem;
+  transform: rotate(-135deg);
 }
 #pic1:checked~ .arrow label:nth-of-type(2),
 #pic2:checked ~ .arrow label:nth-of-type(3),
@@ -47,4 +73,5 @@
   position: absolute;
   top: 50%;
   right: 5rem;
+  transform: rotate(-320deg);
 }

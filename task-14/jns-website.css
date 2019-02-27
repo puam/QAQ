@@ -19,7 +19,7 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 17px;
-  color: #42b683;
+  color: #29b078;
 }
 .head .logo {
   display: flex;
@@ -33,7 +33,7 @@ body {
   display: flex;
   justify-content: flex-end;
   padding: 5px 0 5px;
-  color: #42b683;
+  color: #29b078;
   cursor: pointer;
 }
 @media screen and (max-width: 992px) {
@@ -45,5 +45,154 @@ body {
   .register {
     display: none;
   }
+}
+.content-box {
+  padding: 4rem 0 2rem 0;
+  font-size: 17px;
+  text-align: center;
+}
+.content-box .image-box {
+  height: 66px;
+}
+.content-box p {
+  color: #a1a1a1;
+}
+.m-r-10 {
+  margin-right: 10px;
+}
+.box-border {
+  border-left: 1px dashed #dedede;
+  margin-left: 10px;
+}
+.box-border .online-number {
+  padding-top: 0.5rem;
+}
+.box-border .employment {
+  padding-top: 0.5rem;
+}
+@media screen and (max-width: 600px) {
+  .box-border {
+    border: none;
+  }
+}
+.headline {
+  margin: 2rem 0;
+  text-align: center;
+}
+.d-f-j-s-a-c {
+  margin: 1rem 0 0.5rem 0;
+}
+.d-f-j-s-a-c .roundness {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #29b078;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 6px #e4e4e4;
+}
+.d-f-j-s-a-c .learning-method {
+  color: #a1a1a1;
+}
+.d-f-j-s-a-c .padding-box {
+  width: 32px;
+  height: 30px;
+}
+.character-card {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  background: #fff;
+  color: #a1a1a1;
+  border: 1px solid #eeeded;
+}
+.character-card .counselor {
+  color: #565656;
+}
+.character-card p {
+  margin: 1rem;
+}
+.circle {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+.circle .circle-white {
+  margin: 0 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 5px #e5e5e5;
+}
+.circle .circle-white:hover {
+  background: #29b078;
+}
+.company {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3px;
+  height: 200px;
+  text-align: center;
+  background: #fff;
+  border: 3px solid #fff;
+}
+.company:hover {
+  border: 3px solid #f1f1f1;
+  box-shadow: 0 0 5px #ddd;
+}
+.blogroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blogroll .int {
+  margin-right: 8px;
+  width: 8px;
+  height: 8px;
+  background: #a1a1a1;
+  border-radius: 50%;
+}
+.blogroll .hyperlink-text {
+  color: #a1a1a1;
+  border-bottom: 1px solid #fff;
+}
+.blogroll .hyperlink-text:hover {
+  border-bottom: 1px solid #26a26f;
+}
+.blogroll .text-none {
+  opacity: 0;
+}
+.foot-color {
+  background: #29b078;
+  color: #fff;
+}
+.foot-color .foot-links-hover {
+  margin: 1rem 0;
+}
+.foot-color .foot-links-hover .foot-Colors {
+  border-bottom: 1px solid #29b078;
+}
+.foot-color .foot-Colors:hover {
+  border-bottom: 1px solid #fff;
+}
+.foot-text {
+  margin: 1rem 0;
+}
+.foot-text-none {
+  opacity: 0;
+}
+.clearing-margin {
+  margin: 0;
+  text-align: center;
+}
+.foot-TEXt {
+  margin: 1rem 0 10px ;
+}
+.clearing-margin {
+  padding: 3px 0;
+  border-top: 3px solid #32c086;
 }
 /*# sourceMappingURL=jns-website.css.map */

@@ -1,7 +1,7 @@
 .father {
   background: #29b078;
 }
-a {
+.nav-link {
   color: #fff;
   text-decoration: none;
 }
@@ -55,11 +55,11 @@ a {
     flex-wrap: wrap;
   }
   .list {
-    display: none;
     margin: 0;
     height: 0;
     padding-left: 0;
     width: 100%;
+    transition: height 0.5s;
   }
   .list-item {
     height: 40px;
@@ -70,8 +70,8 @@ a {
     border-bottom: 1px solid rgba(0, 0, 0, 0);
   }
   #nav-menu:checked ~ ul {
-    display: block;
     height: 200px;
+    transition: height 0.5s;
   }
 }
 /*# sourceMappingURL=nav.css.map */

@@ -43,13 +43,18 @@ input{
     height: 2rem;
     outline: none;
     background-color: white;
-    width: 100%;
+    /*width: 100%;*/
 }
 .aa6{
-    margin-top: 40px;
-    padding: 8px;
-    background-color: white;
+    margin: 10px 0;
+    width: 100%;
+    background: #fff;
 }
+.aaa1{
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
 .aa7{
     margin-top: -48px;
     margin-left: 50px;
