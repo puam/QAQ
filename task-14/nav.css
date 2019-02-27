@@ -38,7 +38,7 @@
     height: 0;
   }
   .list-item {
-    padding: 4.3px 7px;
+    padding: 9.3px 7px;
     height: 40px;
     line-height: 44px;
     list-style: none;
@@ -73,5 +73,8 @@
     height: 200px;
     transition: height 0.5s;
   }
+}
+.pt-b {
+  padding: 5px 0;
 }
 /*# sourceMappingURL=nav.css.map */

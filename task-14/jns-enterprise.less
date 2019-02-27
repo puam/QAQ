@@ -90,10 +90,6 @@ main{
     border-bottom: 1px solid @border-color;
   }
 }
-.list{
-  display: flex;
-  justify-content: center;
-}
 .enterprise-layout {
   display: flex;
   justify-content: center;
@@ -142,8 +138,17 @@ main{
     }
     .potato-text{
       margin: 0;
-      padding: 1rem;
+      padding: 1rem 2.5rem;
     }
+  }
+}
+@media screen and (max-width: 778px){
+  .potato-synopsis{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: @gray-font;
+    border-bottom: 1px solid @border-color;
   }
 }
 .section-text{

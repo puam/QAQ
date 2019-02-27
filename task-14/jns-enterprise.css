@@ -81,10 +81,6 @@ main .bg-white {
   padding: 1rem 0;
   border-bottom: 1px solid #e6e6e6;
 }
-.list {
-  display: flex;
-  justify-content: center;
-}
 .enterprise-layout {
   display: flex;
   justify-content: center;
@@ -134,7 +130,16 @@ main .bg-white {
 }
 .potato .potato-synopsis .potato-text {
   margin: 0;
-  padding: 1rem;
+  padding: 1rem 2.5rem;
+}
+@media screen and (max-width: 778px) {
+  .potato-synopsis {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #a1a1a1;
+    border-bottom: 1px solid #e6e6e6;
+  }
 }
 .section-text {
   margin: 0;
