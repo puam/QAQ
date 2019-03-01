@@ -2,8 +2,8 @@
   background: #29b078;
 }
 .nav-link {
-  color: #fff;
   text-decoration: none;
+  color: #fff;
 }
 .list-item:hover {
   border-bottom: 1px solid #fff;
