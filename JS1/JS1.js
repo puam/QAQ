@@ -1,5 +1,6 @@
 //定时器绑定点击事件。
 var a;
+var z=document.getElementsByClassName('box');
 function start() {
     window.clearTimeout(a);
   a= window.setInterval(bg, 1000);
@@ -7,9 +8,17 @@ function start() {
 }
 function over() {
     window.clearTimeout(a);
+    choose();
+}
+//颜色盒子
+function choose() {
     var su=document.getElementsByClassName('box');
     for (var i=0;i<9;i++) {
         su[i].style.background="rgb(255,193,37)";
+    }
+    var z=document.getElementsByClassName('box');
+    for (var i=0;i<9;i++) {
+        z[i].style.background="rgb(255,193,37)";
     }
 }
 function bg() {
@@ -33,11 +42,11 @@ function bg() {
     var x=shuffle();
     //生成颜色
     //运行洗牌算法
-    var z=document.getElementsByClassName('box');
-    for (var i=0;i<9;i++) {
-        z[i].style.background="rgb(255,193,37)";
-    }
-    console.log(z);
+    // var z=document.getElementsByClassName('box');
+    // for (var i=0;i<9;i++) {
+    //     z[i].style.background="rgb(255,193,37)";
+    // }
+    choose();
     z[x[0]].style.background=color();
     z[x[1]].style.background=color();
     z[x[2]].style.background=color();
