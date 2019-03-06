@@ -1,0 +1,15 @@
+{
+  "name": "WebStorm",
+  "version": "2018.3.5",
+  "buildNumber": "183.5912.23",
+  "productCode": "WS",
+  "svgIconPath": "bin/webstorm.svg",
+  "launch": [
+    {
+      "os": "Windows",
+      "launcherPath": "bin/webstorm64.exe",
+      "javaExecutablePath": "jre64/bin/java.exe",
+      "vmOptionsFilePath": "bin/webstorm64.exe.vmoptions"
+    }
+  ]
+}

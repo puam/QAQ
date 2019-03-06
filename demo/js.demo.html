@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+</head>
+<body>
+<button type="button" onclick="alert('我爱JavaScript')"></button>
+<!--<p id="demo">-->
+    JavaScript 能改变 HTML 元素的内容。
+</p>
+
+<script>
+    function myFunction()
+    {
+        x=document.getElementById("demo");  // 找到元素
+        x.innerHTML="Hello JavaScript!";    // 改变内容
+    }
+</script>
+<button id="demo" type="button" onclick="myFunction()">点击这里</button>
+</body>
+</html>

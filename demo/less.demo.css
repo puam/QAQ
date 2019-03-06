@@ -1,0 +1,23 @@
+.demo-one {
+  text-align: center;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.demo {
+  background: #29b078;
+}
+.demo .demo-one {
+  display: flex;
+  justify-content: space-between;
+}
+.demo .demo-one .box {
+  margin: 10px;
+  width: 200px;
+  height: 40px;
+  background: #29bde0;
+  color: blue;
+  border: 1px solid blue;
+}
+/*# sourceMappingURL=less.demo.css.map */
