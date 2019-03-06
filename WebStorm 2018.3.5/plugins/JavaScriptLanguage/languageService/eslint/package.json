@@ -1,0 +1,8 @@
+{
+  "name": "eslint-language-service",
+  "version": "1.0.0",
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "@types/node": "^8.10.21"
+  }
+}
