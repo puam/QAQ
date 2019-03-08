@@ -16,7 +16,7 @@ function choose() {
     for (var i=0;i<9;i++) {
         su[i].style.background="rgb(255,193,37)";
     }
-    var z=document.getElementsByClassName('box');
+    // var z=document.getElementsByClassName('box');
     for (var i=0;i<9;i++) {
         z[i].style.background="rgb(255,193,37)";
     }
