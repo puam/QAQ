@@ -17,11 +17,17 @@
     <div class="game-player">
         <div class="ghost">
             <img height="32" src="Board-game-img/ghost.png" width="32"/>
-            <span>幽灵2&nbsp;&nbsp;人</span>
+            <span>幽灵&nbsp;</span>
+            <input class="slayer" id="killer"  maxlength="1" oninput="this.value=this.
+            value.replace(/[^0-9]/g,'');" type="text">
+            <span>人</span>
         </div>
         <div class="ghost">
             <img height="32" src="Board-game-img/civilian.png" width="32"/>
-            <span>水民6&nbsp;&nbsp;人</span>
+            <span>水民&nbsp;</span>
+            <input class="slayer" id="people"  maxlength="1" oninput="this.value=this.
+            value.replace(/[^0-9]/g,'');" type="text">
+            <span>人</span>
         </div>
     </div>
     <form>
@@ -35,19 +41,19 @@
     <div class="matching-game">
         <div class="game-number">
             <span>请输入玩家数量</span>
-            <input class="input-number" maxlength="2" oninput="this.value=this.
+            <input class="input-number" maxlength="2" id="value" onblur="obtainf()" oninput="this.value=this.
             value.replace(/[^0-9]/g,'');" type="text">
             <span>玩家数量为4-18</span>
         </div>
         <div class="btn">
-            <input class="plus-button" type="button" value="-">
-            <input class="sliding-block" type="range" max="18" min="4" value="0">
-            <input class="minus-button" type="button" value="+">
+            <input class="minus-button" id="decrease" type="button" onclick="reduce()" value="-">
+            <input class="sliding-block" id="block" type="range" onchange="slide()" max="18" min="4" value="4">
+            <input class="plus-button" id="add" type="button" onclick="plus()" value="+">
         </div>
     </div>
 </main>
 <footer>
-    <p>去发牌</p>
+    <button onclick="obtainf()">去发牌</button>
 </footer>
 </body>
 <script src="Board-game.js"></script>
