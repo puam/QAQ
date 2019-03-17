@@ -96,5 +96,5 @@ function obtainf() {
     shuffleArray(color);
     //洗牌算法函数在点击事件内运行
     localStorage.data=color;
-    window.location.href="https://puam.github.io/QAQ/Board-game-JS/Board-game.html";
+    window.location.href="https://puam.github.io/QAQ/JS3/JS3-deal.html";
 }
