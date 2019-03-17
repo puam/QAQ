@@ -1,0 +1,65 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 780px;
+  min-width: 320px;
+  height: 60px;
+  width: 100%;
+}
+header .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  color: #fff;
+  background: #29bde0;
+  font-size: 1.3rem;
+}
+header .head img {
+  margin: 0 15px;
+  cursor: pointer;
+}
+main {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+  background: #29bde0;
+}
+main .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffedc5;
+  width: 37vh;
+  height: 70vh;
+  border: 5px solid #fff;
+}
+main .card .circle {
+  position: absolute;
+  top: -15px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background: #fff;
+  color: #f56b81;
+  border: 3px solid #ffedc5;
+}
+footer {
+  height: 7vh;
+  line-height: 7vh;
+  text-align: center;
+  background: #29bde0;
+}
+footer button {
+  width: 37vh;
+  height: 4vh;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #fbb435;
+  cursor: pointer;
+}
+/*# sourceMappingURL=brpg3.css.map */
