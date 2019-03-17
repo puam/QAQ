@@ -1,19 +1,19 @@
 //点击事件
 document.getElementById("value").value = 4;
-
-function obtainf() {
+document.getElementById("killer").value=1;
+document.getElementById("people").value=3;
+function inputbox() {
     //获取输入框与滑块的value值；
     var input = document.getElementById("value").value;
     var strip = document.getElementById("block");
     //判断输入框的值是否满足条件
     if (input >= 4 && input <= 18) {
-        strip.value = input;
+        strip.value = input;//获取input赋值给strip滑块
+        allocation();//调用函数,把input的value值与杀手和平民关联.
     } else {
         alert("请输入正确的玩家数量")
     }
-    allocation();
 }
-
 //滑块
 function slide() {
     // 获取输入框的值与滑块的值
@@ -42,12 +42,11 @@ function plus() {
     if (strip.value >= 4 && strip.value <= 18) {
         strip.value++;
         slide();
-        console.log(strip.value);
     } else {
         alert("回家写作业吧？")
     }
 }
-
+//计算杀手人数,分配身份.
 function allocation() {
     // 获取input框的value值
     var input = document.getElementById("value");
@@ -74,19 +73,27 @@ function allocation() {
         peo[p] = "平民";
     }
     //合并身份
-    var role = kill.concat(peo);
-    console.log(role);
+    color = kill.concat(peo);
 }
-
-function shuffle() {
-    var input = document.getElementById("value");
-    var arr = new Array(input.value);
-    for (var x = 0; x < input.value; x++) {
-        arr[x]=x;
+//点击事件
+function obtainf() {
+    //洗牌算法函数.
+    allocation();
+    function shuffleArray(color) {
+        var color = color.slice();
+        var len = color.length;
+        var temp, random_index;
+        while (len != 0) {
+            random_index = Math.round(0 + (len - 1 - 0) * Math.random());
+            temp = color[random_index];
+            color[random_index] = color[len - 1];
+            color[len - 1] = temp;
+            --len;
+        }
+        console.log(color);
+        return color;
     }
-    var arr2=new Array();
-    for (var x=input.value;x>0;){
-        var rnd=Math.floor()
-    }
-
+    shuffleArray(color);
+    //洗牌算法函数在点击事件内运行
+    localStorage.data=color;
 }
