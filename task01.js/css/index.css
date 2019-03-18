@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.entirety-box {
+  width: 100%;
+  max-width: 780px;
+  min-width: 320px;
+  margin: auto;
+}
+.entirety-box .box {
+  float: left;
+  margin: 2.66826903%;
+  padding: 14%;
+  border-radius: 20px;
+  background: rgba(255, 193, 37);
+}
+.btn {
+  display: block;
+  color: #fefefe;
+}
+.btn .start {
+  margin: 10px 0 5px 0;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #fea600;
+  background: #fefefe;
+  cursor: pointer;
+}
+.btn .over {
+  margin: 5px 0 10px 0;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #fea600;
+  background: #fefefe;
+  cursor: pointer;
+}
+.start:hover {
+  background: #fea600;
+  color: #fefefe;
+}
+.over:hover {
+  background: #fea600;
+  color: #fefefe;
+}
+button {
+  outline: none;
+}
+/*# sourceMappingURL=index.css.map */
