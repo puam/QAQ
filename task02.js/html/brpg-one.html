@@ -6,24 +6,24 @@
     <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <link rel="stylesheet" href="brpg2.css">
+    <link rel="stylesheet" href="../css/brpg-one.css">
 </head>
 <body>
 <header>
-    <img class="left-return" height="41" src="img/left-return.png" width="25"/>
+    <img class="left-return" height="41" src="../img/left-return.png" width="25"/>
 </header>
 <main>
     <p class="title">玩家配比</p>
     <div class="game-player">
         <div class="ghost">
-            <img height="32" src="img/ghost.png" width="32"/>
+            <img height="32" src="../img/ghost.png" width="32"/>
             <span>幽灵&nbsp;</span>
             <input class="slayer" id="killer"  maxlength="1" oninput="this.value=this.
             value.replace(/[^0-9]/g,'');" type="text">
             <span>人</span>
         </div>
         <div class="ghost">
-            <img height="32" src="img/civilian.png" width="32"/>
+            <img height="32" src="../img/civilian.png" width="32"/>
             <span>水民&nbsp;</span>
             <input class="slayer" id="people"  maxlength="1" oninput="this.value=this.
             value.replace(/[^0-9]/g,'');" type="text">
@@ -56,5 +56,5 @@
     <button onclick="obtainf()">去发牌</button>
 </footer>
 </body>
-<script src="brpg2.js"></script>
+<script src="../JS/brpg-one.js"></script>
 </html>
