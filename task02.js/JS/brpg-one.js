@@ -96,5 +96,5 @@ function obtainf() {
     }
     shuffleArray(color);
     //洗牌算法函数在点击事件内运行
-    window.location.href="...../QAQ..../JS.../index-JS2../brpg3./brpg3.html"
+    window.location.href="./html/brpg-two.html"
 }
