@@ -28,23 +28,24 @@ function slide() {
 function reduce() {
     //获取滑块与输入框减号的value值
     var strip = document.getElementById("block");
+    //按钮控制滑块
     //进行if判断
-    if (strip.value >= 1 && strip.value <= 20) {
+    // if (strip.value >= 1 && strip.value <= 20) {
         strip.value--;
         slide();
-    }
+    // }
 }
 
 function plus() {
     //获取value值
     var strip = document.getElementById("block");
     //判断
-    if (strip.value >= 4 && strip.value <= 18) {
+    // if (strip.value >= 4 && strip.value <= 18) {
         strip.value++;
         slide();
-    } else {
-        alert("回家写作业吧？")
-    }
+    // } else {
+    //     alert("回家写作业吧？")
+    // }
 }
 //计算杀手人数,分配身份.
 function allocation() {
@@ -96,5 +97,6 @@ function obtainf() {
     }
     shuffleArray(color);
     //洗牌算法函数在点击事件内运行
-    window.location.href="./html/brpg-two.html"
+    //本地跳转
+    window.location.href="../html/check-identity.html"
 }
