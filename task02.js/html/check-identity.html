@@ -7,22 +7,27 @@
     <script src="../../jquery-3.3.1.js"></script>
 </head>
 <body>
+<div class="max">
 <header>
     <div class="head">
-        <img src="../img/return.png" height="44" width="24"/>
+        <img id="return" src="../img/return.png" height="44" width="24"/>
         <span>查看身份</span>
         <img src="../img/quit.png" height="36" width="36"/>
     </div>
 </header>
 <main>
     <div class="card">
-        <img src="../img/card-one.png" height="230" width="230"/>
-        <div class="circle" id="num"><span>3</span></div>
+        <img id="show" src="../img/card-one.png" height="222" width="222"/>
+        <img id="conceal" src="../img/card-two.png" height="222" width="222"/>
+        <div class="circle" id="num">1</div>
+        <p class="word-group" id="role">1</p>
+        <p class="hint" id="sports">想办法猜到别人的词，同时还要注意不要暴露自己哦！</p>
     </div>
 </main>
 <footer>
-    <button type="button" onclick="examine()">查看三号身份</button>
+    <button type="button" id="clicks" >查看1号身份</button>
 </footer>
+</div>
 </body>
 <script src="../JS/check-identity.js"></script>
 </html>

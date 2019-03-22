@@ -100,3 +100,6 @@ function obtainf() {
     //本地跳转
     window.location.href="../html/check-identity.html"
 }
+function back() {
+    window.location.href="../html/index.html"
+}
