@@ -58,4 +58,19 @@ function color() {
     var b=Math.floor(Math.random()*256);
     return"rgb("+r+','+g+','+b+")";
     //取回返回值
-}
+// }
+// var color = "blue";
+// function changeColor(){
+//     var anotherColor = "red";
+//     function swapColors(){
+//         var tempColor = anotherColor;
+//         anotherColor = color;
+//         color = tempColor;
+//         // 这里可以访问color, anotherColor, 和 tempColor
+//     }
+//     // 这里可以访问color 和 anotherColor，但是不能访问 tempColor
+//     swapColors();
+// }
+// changeColor();
+// // 这里只能访问color
+// console.log("Color is now " + color);

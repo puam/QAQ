@@ -21,7 +21,8 @@ header {
   background: #5fc0cd;
   display: flex;
   justify-content: space-between;
-  padding: 10px 0 10px 0;
+  align-items: center;
+  height: 50px;
   top: 0;
   position: fixed;
   max-width: 780px;
@@ -39,11 +40,14 @@ header span {
 header .box {
   margin-right: 5px;
 }
+.box-s {
+  height: 50px;
+}
 main .content {
   background-image: url("img-12/doctor.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  height: 280px;
+  height: 230px;
   display: flex;
   align-items: center;
 }
@@ -133,7 +137,6 @@ main .age-limit .man-hour {
 main .self-introduction {
   display: flex;
   align-items: center;
-  margin-bottom: 8rem;
   border-bottom: 1px solid #ddd;
 }
 main .self-introduction span {
