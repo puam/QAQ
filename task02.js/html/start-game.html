@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <script src="../../jquery-3.3.1.js"></script>
+    <link href="../css/start-game.css" rel="stylesheet">
+</head>;
+<body>
+<div class="max">
+    <header>
+        <img height="44" id="backtrack" src="../img/return.png" width="24"/>
+        <span >法官台本</span>
+        <img height="36" src="../img/quit.png" width="36"/>
+    </header>
+    <main>
+        <div class="day" id="display">第一天</div>
+        <div class="triangle"></div>
+        <div class="weather">
+            <div class="timer-shaft">
+                <div class="moon"><img height="35" src="../img/moon.png" width="29"/></div>
+                <div class="string"></div>
+                <div class="sun"><img height="36" src="../img/sun.png" width="36"/></div>
+                <div class="string-one"></div>
+            </div>
+            <div class="option">
+                <div class="left-triangle"></div>
+                <button class="btn" id="murder" type="button">杀手杀人</button>
+            </div>
+            <div class="option">
+                <div class="left-triangle"></div>
+                <button class="btn" type="button">亡灵发表遗言</button>
+            </div>
+            <div class="option">
+                <div class="left-triangle"></div>
+                <button class="btn" type="button">玩家依次发言</button>
+            </div>
+            <div class="option">
+                <div class="left-triangle"></div>
+                <button class="btn" type="button">全民投票</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <button type="button">结束游戏</button>
+        <button type="button">法官日志</button>
+    </footer>
+</div>
+</body>
+<script src="../JS/start-game.js"></script>
+</html>

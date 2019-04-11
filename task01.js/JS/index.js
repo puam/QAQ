@@ -42,10 +42,10 @@ function bg() {
     var x=shuffle();
     //生成颜色
     //运行洗牌算法
-    // var z=document.getElementsByClassName('box');
-    // for (var i=0;i<9;i++) {
-    //     z[i].style.background="rgb(255,193,37)";
-    // }
+    var z=document.getElementsByClassName('box');
+    for (var i=0;i<9;i++) {
+        z[i].style.background="rgb(255,193,37)";
+    }
     choose();
     z[x[0]].style.background=color();
     z[x[1]].style.background=color();
@@ -56,7 +56,8 @@ function color() {
     var r=Math.floor(Math.random()*256);
     var g=Math.floor(Math.random()*256);
     var b=Math.floor(Math.random()*256);
-    return"rgb("+r+','+g+','+b+")";
+    return"rgb("+r+','+g+','+b+")"
+    //这是一个函数，
     //取回返回值
 // }
 // var color = "blue";

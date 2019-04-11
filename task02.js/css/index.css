@@ -11,6 +11,7 @@ body {
   max-width: 780px;
   min-width: 320px;
   margin: 0 auto;
+  overflow: hidden;
 }
 header #sidemenu {
   display: none;
@@ -20,12 +21,13 @@ header #sidemenu:checked + aside {
 }
 header #sidemenu:checked ~ #wrap {
   padding-left: 50%;
+  margin-right: -50%;
 }
 aside {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -100%;
+  left: -150%;
   width: 50%;
   transition: 0.2s ease-out;
   background: #fff;

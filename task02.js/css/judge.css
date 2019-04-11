@@ -1,7 +1,6 @@
 body {
   margin: 0;
 }
-
 .max {
   margin: 0 auto;
   width: 100%;
@@ -10,7 +9,6 @@ body {
   max-width: 780px;
   background: #29bde0;
 }
-
 header {
   position: fixed;
   display: flex;
@@ -24,35 +22,29 @@ header {
   color: #fff;
   background: #29bde0;
   border: 1px solid #fefefe;
-
-  img {
-    padding: 0 15px;
-  }
 }
-.full{
+header img {
+  padding: 0 15px;
+}
+.full {
   height: 90px;
 }
-main {
-  //display: flex;
-  //justify-content: space-between;
-  //flex-wrap: wrap;
-  .game-box{
-    float: left;
-    width: 29.2%;
-    margin: 1.13%;
-    text-align: center;
-    border: 3px solid #fff;
-    .role{
-      background: #f5c97b;
-      padding: 15.2%;
-    }
-    .number{
-      background: #83b09a;
-      padding: 1%;
-    }
-  }
+main .game-box {
+  float: left;
+  width: 29.2%;
+  margin: 1.13%;
+  text-align: center;
+  border: 3px solid #fff;
 }
-.btn{
+main .game-box .role {
+  background: #f5c97b;
+  padding: 15.2%;
+}
+main .game-box .number {
+  background: #83b09a;
+  padding: 1%;
+}
+.btn {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -63,15 +55,15 @@ main {
   max-width: 780px;
   min-width: 320px;
   background: #29bde0;
-  button{
-    //display: block;
-    width: 80%;
-    height: 40px;
-    background: #fbb435;
-    border: none;
-    outline: none;
-    color: #fff;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
 }
+.btn button {
+  width: 80%;
+  height: 40px;
+  background: #fbb435;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+/*# sourceMappingURL=judge.css.map */

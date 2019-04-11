@@ -1,6 +1,6 @@
 //取出浏览器保存的值，设置为常量方便使用。
 z=localStorage.getItem("data");
-zz=z.split(",",);
+zz=z.split(",",);//清除字符串符号.
 //默认一张显示一张隐藏。
 document.getElementById("show").style.display="block";
 document.getElementById("conceal").style.display="none";
@@ -11,7 +11,6 @@ document.getElementById("sports").style.visibility="hidden";
 //设置x为常量
 $click=0;
 //隐藏角色。
-
 $("#clicks").click(function () {
     //计算点击次数的表达式。
     $click = $click + 1;
@@ -19,7 +18,6 @@ $("#clicks").click(function () {
     //向上取整。点击一次的话，默认把点击次数的值加1，取整第一个值是1。
     var $a=($click+1)/2;
    $("#num").get(0).innerHTML=Math.ceil($a);
-
 
    //点击次数+2，来计算查看身份的值。
     var $button=($click+2)/2;
@@ -60,13 +58,22 @@ $("#clicks").click(function () {
     //if判断，点击次数的长度是数组的两倍，所以，给数组长度-1.
     if ($click===2*zz.length-1){
         $("#clicks").text("法官查看");
-        window.location.href="../html/judge-loock.html"
+        window.location.href="../html/judge.html"
     }
-    var $list={};
-    for (var $key in zz) {
-        $list[$key] = zz[$key];
+    var gather=[];
+    for (let i=0; i<zz.length;i++){
+        gather.push({name:zz[i],number:i+1,state:1});
+        //push进去一个数组，存放死掉的对象的信息。
     }
-    sessionStorage.setItem("key","$list");
+    // var death=[];
+    // for (let i=0;i<zz.length;i++) {
+    //     death.push([{},{}]);
+    // }
+    // console.log(death);
+
+    // 把对象通过JSON的方式存入浏览器。
+    sessionStorage.setItem("list",JSON.stringify((gather)));
+    // sessionStorage.setItem("death",JSON.stringify(death));
 });
 $("#return").click(function () {
    window.location.href="../html/allocation-game.html";

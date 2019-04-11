@@ -39,7 +39,7 @@
     <div class="slides"
          style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.756);">
         <section class="past" style="top: 158px; display: none;" hidden="" aria-hidden="true">
-            <h3>JavaScript数据类型</h3>
+            <h3>JavaScript的面向对象编程</h3>
             <p>分享人：刘超</p>
         </section>
         <section class="past" style="top: 3px; display: block;" hidden="" aria-hidden="true">
@@ -58,65 +58,103 @@
         </section>
         <section class="past" style="top: 267px; display: block;" hidden="" aria-hidden="true">
             <section>
-                <p>JavaScript是全世界最流行的脚本语言，在我们的手机，平板，电脑上浏览的所有网页，以及无数个基于html5的app，交互逻辑都是以JavaScript的驱动的。</p>
-                <p>计算机顾名思义就是可以做数学计算的机器，但是计算机能处理的不仅仅是数值，还可以处理音频，视频，网页，图形，文本等数据。</p>
-                <p>不同的数据需要取定义不同的数据类型，所以JavaScript定义了一下几种数据类型</p>
-                <p>原始类型(基本类型)：1，number，2，string，3，boolean，4，null，5，undefined</p>
-                <p>引用类型:object(对象)</p>
-                <P>三大引用类型：1，object，2，Array，3，function</P>
+                <p>面向对象程序设计（object oriented Programming）作为一种新方法，其本质是以建立模型体现出来的抽象思维过程和面向对象的方法。摸具是用力反映现实世界中事务特征的。
+                    任何一个摸具都不可能反映客观的一切具体特性，只能对事务特征和变化规律的一种抽象，且它所涉及的范围内更普遍，更集中，更深刻地描述客体特征。通过建立模型达到抽象是人们对客体的认识深化。
+                </p>
+                <p>面向对象编程是一种编程思想，在JavaScript中，万物都是对象的基础上，面向对象编程的思想主要以对象为主，将一个问题抽象出具体的对象，并且将抽象出来的对象和对象的属性和方法封装成一个类。</p>
             </section>
             <section>
                 <h3>知识剖析</h3>
             </section>
             <section>
-                <p>原始类型（基本类型）与引用类型的区别</p>
-                <p>原始类型的数据按值访问，可以操作保存在变量中实际的值，在原始类型中，null与undefined比较特殊</p>
-                <p>引用类型是：引用的值保存在内存的对象，与其他语言不同，JavaScript不允许直接访问内存中的位置，也就是说不能直接操作对象中的内存空间，在操作对象时，实际上时在操作对象
-                    的引用而不是实际对象，所以引用类型是按引用访问的。</p>
+                <p>面向对象编程与面向过程编程的区别</p>
+                <p>无论面向对象或者面向过程都是一种编程的思想，在面向对象和面向过程中，并不是完全相对的，也不是完全独立的。</p>
+                <p>面向过程编程主要是以动词为主，解决方法是按照顺序一步一步用不同的函数</p>
+                <p>面向对象是把构思问题分解各个对象，建立对象的目的不是为了完成一个步骤，而是为了描述某个事物在整个解决问题的步骤和行为。</p>
             </section>
         </section>
         <section>
-            <p>number</p>
-            <p>JavaScript不区分整数与浮点数，统一用浮点表示，例如，112，0，4748，1，234e，-11，都是合法的类型。</p>
-            <p>NaN表示not a number，当无法计算结果的时候用NaN表示</p>
-            <P>Infinity表示无限大，当数值超过了JavaScript的number所能表示的最大值，就表示为Infinity</P>
+            <p>一个简单的例子.把大象放冰箱</p>
+            <p>在面向过程编程中，我们需要开门（冰箱）</p>
+            <p>装进(冰箱)(对象)</p>
+            <p>关门冰箱</p>
+            <p>面向对象编程，冰箱.开门（）</p>
+            <p>冰箱.装进（大象）</p>
+            <p>冰箱。关门（）</p>
+            <p>简单的说一下，面向对象以主谓为主，将谓语看做一个个对象，每个对象都有自己的属性和方法，比如说，冰箱有自己的id属性，有开门的方法。我们只需要调用一个叫大象的参数就行了。</p>
         </section>
         <section>
-            <p>JavaScript的字符串用"",'',来表示</p>
-            <p>如果字符串的内部即包含‘ "的话，使用转义/字符来标识。</p>
-            <p>转义字符\可以转义很多字符，比如\n表示换行\t表示制表符，字符\本身也要转义，所以\\表示字符就是\</p>
+            <p>举个例子</p>
+            <p>例如我们要做一个五子棋游戏</p>
+            <p>开始游戏</p>
+            <p>黑子先走</p>
+            <p>绘制画面</p>
+            <p>判断输赢</p>
+            <p>轮到白子</p>
+            <p>重复</p>
         </section>
         <section>
-            <p>布尔值是一个只有true，false两种，要么是true，要么就是false</p>
-            <p>我们可以直接用true和false表示布尔值</p>
-            <p>布尔值经常会用到判断里</p>
+            <p>面向对象编程的思想解决问题的话，五子棋可以分为</p>
+            <p>黑棋与白棋，双方行为一样</p>
+            <p>棋盘系统，负责绘制画面</p>
+            <p>我们可以明显的看出，面向对象是以功能来划分的问题，而不是步骤。同样的绘制棋局，这样的好处在于我们维护起来会很方便。</p>
+            <p>如果我们需要加一个悔棋的功能的话，只需要棋盘系统对象保存双放的棋谱，回溯一下就可以。显示和判断规则没有必要触及。</p>
+        </section>
+        <section>
+            <p>在比如，我们要把五子棋这个游戏做成围棋游戏，如果我们是面向过程编程的话，关于五子棋的规则散布在我们写的程序的每个角落。要改动的难度已经相当于重写了。如果我们是
+                面向对象去写的话，我们只需要改动，棋盘对象的规则就可以实现。</p>
         </section>
         <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
-            <P>null和undefined</P>
-            <p>null表示一个空的值，它和0以及空字符串""不同，0是一个数值，”“表示长度为0的字符串，而null表示为空</p>
-            <p>JavaScript设计值希望用null表示一个空值，而undefined表示值未定义。但是事实表明，这并没什么卵用，大部分的情况下，我们应该用null，undefined仅仅实在
-                判断函数的参数是否在传递的情况下有用。</p>
+        <section>
+            <p>创建一个对象，给这个对象新·建属性和方法</p>
+            <p>var box = new Object()</p>
+            <p>box.name="lee"</p>
+            <p>box.age=100;</p>
+            <p>box.run=function()</p>
+            <p>return this.name +this.age+"运行种....}:"</p>
+            <p>alert(box.run())，如果打印的话，就会编程lee 100 运行种</p>
         </section>
         <section>
-            <p>数组是一组按顺序排列的集合，集合的每个值称为元素，JavaScript的数组可以包括任何数据。包括字符串，null，true</p>
-            数组用[]表示，元素之间用，分隔。
+            <p>上面创建了一个对象，并且创建了方法，在run函数种，this的指向很明显就是box，对象的本身。这是JavaScript创建对象的基本方法。缺点就在于，我们如果
+            要创建多个类似的对象的话，就会产生大量的代码。</p>
+            <p>为了解决多个类似对象的声明问题，我们可以使用一种叫做工厂模式的方法，这种方法就是为了解决实例化对象产生大量重复的问题。</p>
+            <p>function createObject(name, age) { //集中实例化的函数</p>
+            <P>   var obj = new Object();</P>
+            <P>   obj.name = name;</P>
+            <p>   obj.age = age;</p>
+            <p>   obj.run = function () {</p>
         </section>
-        <section>
-            <p>object是一组由键值组成的无序集合。值可以是任意数据</p>
-            <p>在键值对中，每个键都又称为对象的属性</p>
-            <p>获取对象的属性，我们需要对象变量.属性名的方式</p>
-        </section>
-        <section>
-            <p>function函数是帮助我们封装，调用代码的最方便的工具！</p>
-        </section>
-        <section style="text-align: left; top: 330px; display: none;" hidden="" aria-hidden="true" class="stack future">
-            <section style="text-align: center; top: 330px; display: none;">
-                <h3>如何判断数据类型</h3>
+            <section>
+                <p>    return this.name + this.age + '运行中...';</p>
+                <p>   };</p>
+                <p>return obj;</p>
+                }
+                <p>var box1 = createObject('Lee', 100); //第一个实例</p>
+                <p>var box2 = createObject('Jack', 200); //第二个实例</p>
+                <p>alert(box1.run());</p>
+                <p>alert(box2.run()); //保持独立</p>
             </section>
             <section>
-                <p>最常见的方法：typeof</p>
-                <p>判断已知对象类型的方法：instanceof</p>
-                <P>jQuery.type</P>
+                <p>使用对象为什么非要使用工厂模式去创建呢。for循环不是也可以吗？</p>
+            </section>
+            <section>
+                <h4>构造函数</h4>
+            </section>
+        <section style="text-align: left; top: 330px; display: none;" hidden="" aria-hidden="true" class="stack future">
+            <section style="text-align: center; top: 330px; display: none;">
+                <p>
+                    1）函数名和实例化构造名相同且大写，(PS：非强制，但这么写有助于区分构造函数和
+                    普通函数)；</p>
+                <p>   2）通过构造函数创建对象，必须使用new 运算符。
+                <p>任何函数，只要通过 new 操作符来调用，那它就可以作为构造函数 ；
+                    　　任何函数，如果不通过 new 操作符来调用，那它跟普通函数也没有什么两样。</p>
+                <p>
+                    1）当使用了构造函数，并且new 构造函数()，那么就后台执行了new Object()；
+                    2）将构造函数的作用域给新对象，(即new Object()创建出的对象)，而函数体内的this 就
+                    代表new Object()出来的对象。
+                    3）执行构造函数内的代码；
+                    4）返回新对象(后台直接返回)。</p>
+            </section>
             </section>
             <section style="text-align: left; top: 330px; display: none;" hidden="" aria-hidden="true"
                      class="stack future">
@@ -129,12 +167,8 @@
                 <h3>扩展思考</h3>
             </section>
             <section>
-                <p>JavaScript的数据类型的转换</p>
-                <p>number转换</p>
-                <p>var a = “123”;</p>
-                <p> a = Number(a);</p>
-                <p>parseInt():可以把字符串等转为数字，但是如果有小数的话，会向下取整。</p>
-                <P>parseFloat();//浮点数（小数） 与parseInt一样，唯一区别是parseFloat可以保留小数。</P>
+                <p>由于ECMAScript中无法创建类，因此，开发人员发明了一种函数，用函数来封装以特定接口创建对象的细节：
+                    什么时候使用工厂模式? 以下几种情景下工厂模式特别有用： 对象的构建十分复杂 需要依赖具体环境创建不同实例 处理大量具有相同属性的小对象</p>
             </section>
             <section style="text-align: left; top: 330px; display: none;" hidden="" aria-hidden="true"
                      class="stack future">
@@ -143,9 +177,7 @@
             </section>
             <section class="past" style="top: 267px; display: block;" hidden="" aria-hidden="true">
                 <h3>参考文献</h3>
-                <a type="https://www.cnblogs.com/xuniannian/p/7452086.html">JS中的六大数据类型</a>
-                <a type="https://www.jb51.net/article/101110.htm">JavaScript中数据类型转换总结</a>
-                <a type="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000">廖雪峰JavaScript教程</a>
+                <a type="https://www.cnblogs.com/jingwhale/p/4678656.html">面向对象编程</a>
             </section>
             <!--<section>-->
             <!--<P>我们尝试用flex布局，使其盒子垂直对齐，两端对齐</P>-->
@@ -171,10 +203,7 @@
         </section>
         <section style="text-align: left; top: 330px; display: none;" hidden="" aria-hidden="true" class="future">
             <h3>参考文献</h3>
-            <p>参考：<a
-                    href="https://www.cnblogs.com/HRurl/p/7538555.html">less以及SCSS基础语法</a>
-            </p>
-            <p>参考：<a href="https://www.yiibai.com/less/less_mixin_selectors.html"></a>Less在混合类型的选择器</p>
+            <p>参考</p>
         </section>
         <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
             <h3> 更多讨论</h3>

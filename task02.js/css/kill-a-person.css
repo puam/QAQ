@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+}
+.max {
+  margin: 0 auto;
+  width: 100%;
+  min-width: 320px;
+  max-width: 780px;
+  background: #29bde0;
+}
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  min-width: 320px;
+  max-width: 780px;
+  height: 70px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: #29bde0;
+  border: 1px solid #fefefe;
+}
+header img {
+  padding: 0 15px;
+  cursor: pointer;
+}
+.full {
+  height: 70px;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .game-box {
+  text-align: center;
+  flex: 0 0 33.3333%;
+  height: 8rem;
+  margin-bottom: 2rem;
+  margin-top: 10px;
+}
+main .game-box .role {
+  background-color: #f5c97b;
+  margin: auto;
+  width: 6rem;
+  line-height: 5rem;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+main .game-box .number {
+  margin: auto;
+  line-height: 2rem;
+  width: 6rem;
+  background: #83b09a;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+.btn {
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  max-width: 780px;
+  min-width: 320px;
+  background: #29bde0;
+}
+.btn button {
+  width: 80%;
+  height: 40px;
+  background: #fbb435;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.box {
+  height: 44px;
+  width: 24px;
+}
+.hunt {
+  margin: 0;
+  padding-left: 80px;
+  line-height: 40px;
+  background: #b9e9f5;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  margin-left: 10%;
+  margin-bottom: 2rem;
+  border-left: 10px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 10px solid #b9e9f5;
+}
+.fulls {
+  height: 23.66rem;
+}
+.kill {
+  margin-top: 7px;
+}
+.message-box {
+  background-color: #21a8c8 !important;
+}
+.mei {
+  background: red;
+}
+/*# sourceMappingURL=kill-a-person.css.map */

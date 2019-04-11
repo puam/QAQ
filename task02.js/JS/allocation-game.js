@@ -11,7 +11,9 @@ function inputbox() {
         strip.value = input;//获取input赋值给strip滑块
         allocation();//调用函数,把input的value值与杀手和平民关联.
     } else {
-        alert("请输入正确的玩家数量")
+        alert("输入错误的值，请重新输入");
+       var error= document.getElementById("value").value=4;
+       strip.value=error;
     }
 }
 //滑块
