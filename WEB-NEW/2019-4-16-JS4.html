@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -86,45 +86,67 @@
             <p>比如看我们下面这个栗子</p>
         </section>
         <section>
-            <p>如果一个函数有this,但是这个函数被上一级所调用的话,那么this就会指向上一级对象,就一定是这样的吗?</p>
-            <p>我们举个栗子</p>
-            <p>var o = {<br>
-                a:10,<br>
-                b:{<br>
-                a:12,<br>
-                fn:function(){<br>
-                console.log(this.a); //undefined<br>
-                console.log(this); //window<br>
-                }<br>
-                }<br>
-                }<br>
-                var j = o.b.fn;<br>
-                j();</p>
+            <p>var obj={</p>
+            <p> number:11,</p>
+            <p>   b:{</p>
+            <p>     number:12,//12.</p>
+            <p>       c:{</p>
+            <p>          number:13,</p>
+            <p>          fn:function () {</p>
+            <p>          console.log(this.number)</p>
+            <p>         }</p>
+            <p>           }</p>
+            <p>         }</p>
+            <p>      };</p>
+            <p> obj.b.c.fn();</p>
         </section>
         <section>
-            <p>是不是感觉上很奇怪啊,为什么,this指向了a之后,却出现了underfined,why?</p>
-            <p>因为我们忘记了一句话,this永远指向最后调用它的对象,也就是看执行的时候,谁调用的,栗子中,虽然,fn被对象b所引用,但是我们将fn赋值给变量j的时候,并没有执行,所以说最终的指向是window.</p>
+            <p>谁调用了this,this就去指向谁的话.这里我们明明是用,obj去调用的,按理说,this应该去指向obj才对</p>
+            <p>为什么是等于13呢?是以为,并不是c这个对象去调用了fn的啊</p>
+            <P>因为很简单,如果一个函数中有this,但是this却没有被上一级所调用的话,那么this就会指向全局,window,这里我们要说明的是,如果在严格模式里面,this指向的不是window,但是我们不探讨严格版的问题.</P>
+            <p>情况2,如果一个函数有this,但是这个函数被上一级所调用的话,那么this的指向就是上一级对象.</p>
+            <p>情况3,如果一个函数有this,这个函数中,包含多个对象,尽管这个函数是被最外层的对象所调用的,this指向也只是它的上一级对象.</p>
         </section>
         <section class="future" style="top: 267px; display: block;" hidden="" aria-hidden="true">
-        <section>
-            <p> return this.name + this.age + '运行中...';</p>
-            <p> };</p>
-            <p>return obj;</p>
-            }
-            <p>var box1 = createObject('Lee', 100); //第一个实例</p>
-            <p>var box2 = createObject('Jack', 200); //第二个实例</p>
-            <p>alert(box1.run());</p>
-            <p>alert(box2.run()); //保持独立</p>
-        </section>
-        <section>
-            <p>构造函数版this调用</p>
-            <P>function Fn(){<br>
-                this.user = "追梦子";<br>
+            <section>
+                <p>如果一个函数有this,但是这个函数被上一级所调用的话,那么this就会指向上一级对象,就一定是这样的吗?</p>
+                <p>我们举个栗子</p>
+                <p>var o = {<br>
+                    a:10,<br>
+                    b:{<br>
+                    a:12,<br>
+                    fn:function(){<br>
+                    console.log(this.a); //undefined<br>
+                    console.log(this); //window<br>
+                    }<br>
+                    }<br>
+                    }<br>
+                    var j = o.b.fn;<br>
+                    j();</p>
+            </section>
+            <section>
+                <p>是不是感觉上很奇怪啊,为什么,this指向了a之后,却出现了underfined,why?</p>
+                <p>因为我们忘记了一句话,this永远指向最后调用它的对象,也就是看执行的时候,谁调用的,栗子中,虽然,fn被对象b所引用,但是我们将fn赋值给变量j的时候,并没有执行,所以说最终的指向是window.</p>
+            </section>
+            <section>
+                <p> return this.name + this.age + '运行中...';</p>
+                <p> };</p>
+                <p>return obj;</p>
                 }
-                var a = new Fn();<br>
-                console.log(a.user); //追梦子<br>
-            </P>
-        </section>
+                <p>var box1 = createObject('Lee', 100); //第一个实例</p>
+                <p>var box2 = createObject('Jack', 200); //第二个实例</p>
+                <p>alert(box1.run());</p>
+                <p>alert(box2.run()); //保持独立</p>
+            </section>
+            <section>
+                <p>构造函数版this调用</p>
+                <P>function Fn(){<br>
+                    this.user = "追梦子";<br>
+                    }
+                    var a = new Fn();<br>
+                    console.log(a.user); //追梦子<br>
+                </P>
+            </section>
             <section>
                 <p>    return this.name + this.age + '运行中...';</p>
                 <p>   };</p>
@@ -134,52 +156,63 @@
                 <p>var box2 = createObject('Jack', 200); //第二个实例</p>
                 <p>alert(box1.run());</p>
                 <p>alert(box2.run()); //保持独立</p>
-            </section>
-            <section>
-                <p>    return this.name + this.age + '运行中...';</p>
-                <p>   };</p>
-                <p>return obj;</p>
-                }
-                <p>var box1 = createObject('Lee', 100); //第一个实例</p>
-                <p>var box2 = createObject('Jack', 200); //第二个实例</p>
-                <p>alert(box1.run());</p>
-                <p>alert(box2.run()); //保持独立</p>
-            </section>
-            <section>
-                <h4>常见问题</h4>
-            </section>
-        <section style="text-align: left; top: 330px; display: none;" hidden="" aria-hidden="true" class="stack future">
-            <section style="text-align: center; top: 330px; display: none;">
-                <p>我们为什么要使用,call和apply以及bind呢?</p>
-                <p>apply() 方法调用一个函数, 其具有一个指定的this值，以及作为一个数组（或类似数组的对象）提供的参数</p>
-                <p>因为我们需要改变函数上下文,在具体一点的话,就是去改变this的指向性.</p>
-                <p>call与apply与bind的差别在于</p>
-                <p>首先,我们说一下,call与apply的区别,call和apply的第一个参数都是要改变上下文的对象,call从第二个参数开始,就是以列表形式展现.</p>
-                <p>apply是,把第一个对象参数之外的都放入数组里面.</p>
-                <p>而bindbind()方法创建一个新的函数, 当被调用时，将其this关键字设置为提供的值，在调用新函数时，在任何提供之前提供一个给定的参数序列。</p>
-            </section>
-            </section>
             </section>
             <section style="text-align: left; top: 330px; display: none;" hidden="" aria-hidden="true"
                      class="stack future">
-                <section style="text-align: center; top: 330px; display: none;"><h3>编码实战</h3></section>
+                <section style="text-align: center; top: 330px; display: none;">
+                    <p>我们为什么要使用,call和apply以及bind呢?</p>
+                    <p>apply() 方法调用一个函数, 其具有一个指定的this值，以及作为一个数组（或类似数组的对象）提供的参数</p>
+                    <p>因为我们需要改变函数上下文,在具体一点的话,就是去改变this的指向性.</p>
+                    <p>call与apply与bind的差别在于</p>
+                    <p>首先,我们说一下,call与apply的区别,call和apply的第一个参数都是要改变上下文的对象,call从第二个参数开始,就是以列表形式展现.</p>
+                    <p>apply是,把第一个对象参数之外的都放入数组里面.</p>
+                </section>
+                <section>
+                    <p>而bindbind()方法创建一个新的函数, 当被调用时，将其this关键字设置为提供的值，在调用新函数时，在任何提供之前提供一个给定的参数序列。</p>
+                </section>
+            </section>
+            <section style="text-align: left; top: 330px; display: none;" hidden="" aria-hidden="true"
+                     class="stack future">
+                <section style="text-align: center; top: 330px; display: none;"><h3>常见问题</h3></section>
             </section>
             <section>
-                <p>this指向性</p>
+                <p>this碰到retrn会发生什么?</p>
+                <p>function fn()</p><br>
+                    {<br>
+                    this.user = '追梦子';<br>
+                    return function(){};<br>
+                    }<br>
+                var a = new fn;<br>
+                    console.log(a.user); //undefined</p>
+\            </section>
+            <section>
+                <p>如果返回值是一共对象的话,那this指向的就是那个返回对象,如果返回值不是对象,那么this还是指向函数的实例.</p>
             </section>
             <section class="past" style="top: 267px; display: block;" hidden="" aria-hidden="true">
                 <h3>扩展思考</h3>
             </section>
             <section>
-                <p>this碰到retrn会发生什么?</p>
-                <p>function fn()</p><br>
-                {<br>
-                this.user = '追梦子';<br>
-                return function(){};<br>
-                }<br>
-                var a = new fn;<br>
-                console.log(a.user); //undefined</p>
-                <p>如果返回值是一共对象的话,那this指向的就是那个返回对象,如果返回值不是对象,那么this还是指向函数的实例.</p>
+                <p>还有什么方法,可以改变this的指向.</p>
+                <P>z箭头函数.</P>
+                <p>箭头函数es6新增的非常有意思的特性.</p>
+                <p>不能通过new关键字调用,因为没有原型,所以不能通过new调用.所以没有原型</p>
+                <p>没有this, super，arguments和new.target绑定, new.target和super关键字是es6新增的</p>
+                <p>箭头函数中的this，取决于他的上层非箭头函数的this指向</p>
+                <p>没有arguments对象，但是可以获取到外层函数的arguments</p>
+                <p>call,apply,bind不能改变箭头函数的this指向</p>
+            </section>
+            <section class="past" style="top: 267px; display: block;" hidden="" aria-hidden="true">
+                <h3>扩展思考</h3>
+            </section>
+            <section>
+                <p>还有什么方法,可以改变this的指向.</p>
+                <P>z箭头函数.</P>
+                <p>箭头函数es6新增的非常有意思的特性.</p>
+                <p>不能通过new关键字调用,因为没有原型,所以不能通过new调用.所以没有原型</p>
+                <p>没有this, super，arguments和new.target绑定, new.target和super关键字是es6新增的</p>
+                <p>箭头函数中的this，取决于他的上层非箭头函数的this指向</p>
+                <p>没有arguments对象，但是可以获取到外层函数的arguments</p>
+                <p>call,apply,bind不能改变箭头函数的this指向</p>
             </section>
             <section style="text-align: left; top: 330px; display: none;" hidden="" aria-hidden="true"
                      class="stack future">
@@ -188,7 +221,10 @@
             </section>
             <section class="past" style="top: 267px; display: block;" hidden="" aria-hidden="true">
                 <h3>参考文献</h3>
-                <a type="https://www.cnblogs.com/jingwhale/p/4678656.html">面向对象编程</a>
+                <a type="http://www.cnblogs.com/pssp/p/5787116.html">JS中call、apply、bind使用指南，带部分原理。</a>
+                <a type="https://www.cnblogs.com/pssp/p/5216085.html">彻底理解js中this的指向，不必硬背。</a>
+                <a type="https://blog.csdn.net/buddha_itxiong/article/details/79558316">javascript中的this到底是指什么</a>
+                <a type="https://juejin.im/post/5a9be4adf265da23a2289404">JavaScrip 中的 this 指向性问题</a>
             </section>
             <!--<section>-->
             <!--<P>我们尝试用flex布局，使其盒子垂直对齐，两端对齐</P>-->

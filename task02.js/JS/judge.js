@@ -16,8 +16,14 @@ function box() {
         $("#gaine").append(div);
     }
 }
+//创建一个空数组,里面放入死掉的人的信息.
+function array(){
+    var death = [[]];
+    sessionStorage.setItem("death", JSON.stringify(death));
+}
 //函数放外面
 box();
+array();
 function start() {
     window.location.href="../html/start-game.html"
 }

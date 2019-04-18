@@ -3,24 +3,27 @@ var a;
 var z=document.getElementsByClassName('box');
 function start() {
     window.clearTimeout(a);
+    //点击刷新次数。
   a= window.setInterval(bg, 1000);
    //刷新速度
 }
 function over() {
     window.clearTimeout(a);
+    //点击颜色恢复
     choose();
+    console.log(a);
 }
-//颜色盒子
+//颜色恢复。
 function choose() {
     var su=document.getElementsByClassName('box');
     for (var i=0;i<9;i++) {
         su[i].style.background="rgb(255,193,37)";
     }
-    // var z=document.getElementsByClassName('box');
-    for (var i=0;i<9;i++) {
-        z[i].style.background="rgb(255,193,37)";
-    }
+    // for (var i=0;i<9;i++) {
+    //     z[i].style.background="rgb(255,193,37)";
+    // }
 }
+
 function bg() {
     //运行洗牌算法
     function shuffle() {
@@ -40,6 +43,7 @@ function bg() {
         //数组的返回值
     }
     var x=shuffle();
+    console.log(x);
     //生成颜色
     //运行洗牌算法
     var z=document.getElementsByClassName('box');
@@ -59,19 +63,4 @@ function color() {
     return"rgb("+r+','+g+','+b+")"
     //这是一个函数，
     //取回返回值
-// }
-// var color = "blue";
-// function changeColor(){
-//     var anotherColor = "red";
-//     function swapColors(){
-//         var tempColor = anotherColor;
-//         anotherColor = color;
-//         color = tempColor;
-//         // 这里可以访问color, anotherColor, 和 tempColor
-//     }
-//     // 这里可以访问color 和 anotherColor，但是不能访问 tempColor
-//     swapColors();
-// }
-// changeColor();
-// // 这里只能访问color
-// console.log("Color is now " + color);
+}

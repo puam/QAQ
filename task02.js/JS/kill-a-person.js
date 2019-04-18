@@ -1,18 +1,17 @@
-//取出浏览器的值存玩家信息的值。
-var player = JSON.parse(sessionStorage.getItem("list"));
-// var death=JSON.parse(sessionStorage.getItem("death"));
-var typeface = "号";
-//if按钮判断
-//这个值是负责写下面页面的点击效果。并转化为数字类型。
+//list浏览器玩家信息。typeface是模板字符串使用的变量。figure浏览器值，判断是否投票。
+var list = JSON.parse(sessionStorage.getItem("list"));
 var figure=sessionStorage.getItem("figure");
+//转换数字类型。
 figure=parseInt(figure);
+//浏览器取出死亡数组。
 
 //模板字符串渲染html
 function box() {
+    var typeface = "号";
     //给id选择器使用。
-    for (let i = 0; i < player.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         let div = (`<div class="game-box" id="kills">
-                    <div class="role">${player[i].name}</div>
+                    <div class="role">${list[i].name}</div>
                     <div class="number">${i + 1}${typeface}</div>
                     <img class="kill" src="../img/img-7-2.png" height="30" width="30"/>
                     </div>`
@@ -21,7 +20,6 @@ function box() {
         $("#gaine").append(div);
     }
 }
-
 //默认加载函数
 $(document).ready(function () {
     box();
@@ -59,42 +57,50 @@ $("#start").click(function () {
     //查找玩家数组的下标。
 var subscript=$(".role").index($(".message-box"));
 if( figure==5){
-    //取出杀人之后浏览器保存的值。
-    var browser = JSON.parse(sessionStorage.getItem("player"));
-    //取出浏览器死亡对象数组。
+    //browser是玩家信息,由于执行环境的关系叫browser.death是死亡数组.push进去投票死去的人.
+    var browser = JSON.parse(sessionStorage.getItem("list"));
     var death=JSON.parse(sessionStorage.getItem("death"));
-    //把选中的死亡状态push进入数组。并且更改state的状态
-    death.push({name: browser[subscript].name,number: browser[subscript].number,state: browser[subscript].state=2});
-    //打印投票存入的对象。
-    //在浏览器里面存值。
+    for (var i=0; i<death.length;i++){
+
+    }
+    death[i-1].push({name: browser[subscript].name,number: browser[subscript].number,state: browser[subscript].state=2});
+    //浏览器存值，death死亡数组存入。list，存入死掉的玩家状态。
     sessionStorage.setItem("death",JSON.stringify(death));
-    sessionStorage.setItem("player",JSON.stringify(browser));
-    var test=[];
-    test.push(death);
+    sessionStorage.setItem("list",JSON.stringify(browser));
+
+    //p获取死亡数组,push死亡数组.
+    // var die=JSON.parse(sessionStorage.getItem("die"));
+    // die.push(death);
+    // sessionStorage.setItem("die",JSON.stringify(die));
+    //修改浏览器步骤.
+    figure=1;
+    sessionStorage.setItem("figure",figure);
     window.location.href="../html/start-game.html";
-    //把浏览器的值禁止点击使用的值，重置之后再去使用。
-    figure=2;
-    sessionStorage.setItem("figure",figure)
-    //浏览器存的数字重新存入。
-}else if (player[subscript].name=="平民") {
-    // /建立空数组存放对象。
-    var death=[];
+}else if (list[subscript].name=="平民") {
+    //取出数组。
+    var death=JSON.parse(sessionStorage.getItem("death"));
+    for (var i=0; i<death.length;i++) {
+
+    }
+    console.log(i);
     // 把死亡状态的对象传入数组。
-    death.push({name:player[subscript].name,number:player[subscript].number,state:player[subscript].state=2});
+    death[i-1].push({name:list[subscript].name,number:list[subscript].number,state:list[subscript].state=2});
     // 浏览器存值。
-    sessionStorage.setItem("player",JSON.stringify(player));
+    sessionStorage.setItem("list",JSON.stringify(list));
     sessionStorage.setItem("death",JSON.stringify(death));
+    console.log(death.length);
+    // var die=JSON.parse(sessionStorage.getItem("die"));
+    // die.push(death);
+    // sessionStorage.setItem("die",JSON.stringify(die));
     // 页面跳转
     window.location.href="../html/start-game.html";
     // 把页面四个按钮的值变量存值。
     sessionStorage.setItem("figure",Store);
-    console.log(player[subscript].name);
+    console.log(list[subscript].name);
 }else {
-    alert("不能对本职业的人下手");
+     alert("兄弟,在干嘛?")
 }
-
 });
-
 $(".quit").click(function () {
     alert("确定要返回首页吗？");
     sessionStorage.clear();
