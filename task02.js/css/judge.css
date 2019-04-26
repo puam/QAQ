@@ -29,10 +29,13 @@ header img {
 .full {
   height: 90px;
 }
+main {
+  margin: 2% 0 0 2%;
+}
 main .game-box {
-  float: left;
-  width: 29.2%;
-  margin: 1.13%;
+  display: inline-block;
+  width: 17%;
+  margin: 2% 7%;
   text-align: center;
   border: 3px solid #fff;
 }

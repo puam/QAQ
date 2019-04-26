@@ -18,12 +18,18 @@ function box() {
 }
 //创建一个空数组,里面放入死掉的人的信息.
 function array(){
+    //death死亡数组，civilian存放死亡的平民，slayer存放死亡的杀手。
     var death = [[]];
     sessionStorage.setItem("death", JSON.stringify(death));
+    var civilian=[];
+    sessionStorage.setItem("civilian",JSON.stringify(civilian));
+    var slayer=[];
+    sessionStorage.setItem("slayer",JSON.stringify(slayer));
 }
 //函数放外面
 box();
 array();
+// civilianArray();
 function start() {
     window.location.href="../html/start-game.html"
 }

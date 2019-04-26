@@ -62,18 +62,12 @@ $("#clicks").click(function () {
     }
     var gather=[];
     for (let i=0; i<zz.length;i++){
-        gather.push({name:zz[i],number:i+1,state:1});
+        gather.push({name:zz[i],number:i+1,state:1,class:"live",button:"allow",triangle:"colour"});
         //push进去一个数组，存放死掉的对象的信息。
     }
-    // var death=[];
-    // for (let i=0;i<zz.length;i++) {
-    //     death.push([{},{}]);
-    // }
-    // console.log(death);
 
     // 把对象通过JSON的方式存入浏览器。
     sessionStorage.setItem("list",JSON.stringify((gather)));
-    // sessionStorage.setItem("death",JSON.stringify(death));
 });
 $("#return").click(function () {
    window.location.href="../html/allocation-game.html";

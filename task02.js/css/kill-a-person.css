@@ -41,15 +41,6 @@ main .game-box {
   margin-bottom: 2rem;
   margin-top: 10px;
 }
-main .game-box .role {
-  background-color: #f5c97b;
-  margin: auto;
-  width: 6rem;
-  line-height: 5rem;
-  border-top: 3px solid #fff;
-  border-right: 3px solid #fff;
-  border-left: 3px solid #fff;
-}
 main .game-box .number {
   margin: auto;
   line-height: 2rem;
@@ -107,8 +98,20 @@ main .game-box .number {
 .kill {
   margin-top: 7px;
 }
+.role {
+  background-color: #f5c97b;
+  margin: auto;
+  width: 6rem;
+  line-height: 5rem;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+.death {
+  background: #565656;
+}
 .message-box {
-  background-color: #21a8c8 !important;
+  background-color: #21a8c8;
 }
 .mei {
   background: red;

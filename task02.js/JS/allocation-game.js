@@ -77,6 +77,9 @@ function allocation() {
     }
     //合并身份
     color = kill.concat(peo);
+    //上传杀手与平民的人数。好进行计算。
+    sessionStorage.setItem("kill",kill.length);
+    sessionStorage.setItem("peo",peo.length);
 }
 //点击事件
 function obtainf() {
