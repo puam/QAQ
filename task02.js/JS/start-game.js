@@ -9,32 +9,23 @@ var list = JSON.parse(sessionStorage.getItem("list"));
 $().ready(function () {
     $(".triangle").not($(".triangle").eq(-1)).hide();
     $(".weather").not($(".weather").eq(-1)).hide();
-    $(".day").eq(-1).click(function () {
-        //点击次数。
-        num = num + 1;
-        if (num % 2 == 1) {
-            $(".weather").eq(-1).hide();
-            $(".triangle").eq(-1).hide();
-            //为奇数的话，隐藏。
-        } else {
-            $(".weather").eq(-1).show();
-            $(".triangle").eq(-1).show();
-            //为偶数出现。
-        }
-    });
-    $(".day").not($(".day").eq(-1)).click(function () {
         // 点击次数。
-        num = num + 1;
-        if (num % 2 == 1) {
-            $(".weather").not($(".weather").eq(-1)).hide();
-            $(".triangle").not($(".triangle").eq(-1)).hide();
-            //     为奇数的话，隐藏。
-        } else {
-            $(".weather").not($(".weather").eq(-1)).show();
-            $(".triangle").not($(".triangle").eq(-1)).show();
-            //为偶数出现。
+    function clicks(){
+        num=num+1;
+        for (var i=0; i<death.length;i++){
+            $(".day").eq(i).click(function () {
+                if (num % 2 ==1){
+                    $(".weather").eq(i).hide();
+                    $(".triangle").eq(i).hide();
+                } else {
+                    $(".weather").eq(i).show();
+                    $(".triangle").eq(i).show();
+                }
+            })
+
         }
-    });
+    }
+    clicks();
     $("#backtrack").click(function () {
         window.location.href = "../html/judge.html";
     });
