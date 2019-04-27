@@ -22,7 +22,6 @@ function box() {
         $("#gaine").append(div);
     }
 }
-
 box();
 dayNumber();
 //默认加载函数

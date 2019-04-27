@@ -1,5 +1,6 @@
-var z=3;
+var z=2;
 
-for (var i=1; i<z; i++){
+for (var i=0; i<z; i++){
    console.log(i);
 }
+console.log(i);

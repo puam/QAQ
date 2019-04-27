@@ -1,5 +1,5 @@
 //num变量点击显示隐藏，figure和digit是为了按钮判断。die的合并数组，death存放死亡的人。list是玩家信息。
-var num = 0;
+// var num = 0;
 var figure = sessionStorage.getItem("figure");
 var digit = parseInt(figure);
 var death = JSON.parse(sessionStorage.getItem("death"));
@@ -7,25 +7,12 @@ var dies = JSON.parse(sessionStorage.getItem("dies"));
 var list = JSON.parse(sessionStorage.getItem("list"));
 //开始加载函数
 $().ready(function () {
-    $(".triangle").not($(".triangle").eq(-1)).hide();
-    $(".weather").not($(".weather").eq(-1)).hide();
-        // 点击次数。
-    function clicks(){
-        num=num+1;
-        for (var i=0; i<death.length;i++){
-            $(".day").eq(i).click(function () {
-                if (num % 2 ==1){
-                    $(".weather").eq(i).hide();
-                    $(".triangle").eq(i).hide();
-                } else {
-                    $(".weather").eq(i).show();
-                    $(".triangle").eq(i).show();
-                }
-            })
-
-        }
-    }
-    clicks();
+    //除了当前的都隐藏掉。
+    $(".days").not($(".days").eq(-1)).hide();
+    $(".day").click(function () {
+        //toggle.如果是显示状态的话，就让他隐藏掉，如果是隐藏的话，就让他显示。
+        $(this).next(".days").toggle();
+    });
     $("#backtrack").click(function () {
         window.location.href = "../html/judge.html";
     });
@@ -69,7 +56,8 @@ $().ready(function () {
         } else {
             alert("请按顺序点击");
             console.log("111");
-        };
+        }
+        ;
     });
     $(".btn-foul").eq(-1).click(function () {
         if (digit == 4) {
@@ -77,9 +65,9 @@ $().ready(function () {
             digit = digit;
             sessionStorage.setItem("figure", digit);
             window.location.href = "../html/kill-a-person.html";
-            list[death.length-1].button="ban";
-            list[death.length-1].triangle="border";
-            sessionStorage.setItem("list",JSON.stringify(list));
+            list[death.length - 1].button = "ban";
+            list[death.length - 1].triangle = "border";
+            sessionStorage.setItem("list", JSON.stringify(list));
         } else {
             alert("请顺序点击")
         }
@@ -87,13 +75,21 @@ $().ready(function () {
     //按钮结束
     //结束游戏
     $(".over").click(function () {
-        sessionStorage.clear();
-        window.location.href="../html/allocation-game.html";
+        var mymessaGE=confirm("你确定要结束游戏对吗？");
+        if (mymessaGE==true){
+            document.write("确定");
+            sessionStorage.clear();
+            window.location.href = "../html/allocation-game.html";
+        }else {
+            document.write("取消");
+        }
     });
 });
+
 function load() {
     for (var i = 0; i < death.length; i++) {
-        let html = (` <div class="day">第${i+1}天</div>
+        let html = (` <div class="day">第${i + 1}天</div>
+      <div class="days">
         <div class="triangle"></div>
         <div class="weather">
             <div class="timer-shaft">
@@ -118,7 +114,8 @@ function load() {
                 <div class="left-triangle-foul ${list[i].triangle}"></div>
                 <button class="btn-foul ${list[i].button}" type="button">全民投票</button>
             </div>
-        </div>`);
+        </div>
+</div>`);
         //渲染html0
         $("main").append(html);
     }
@@ -136,6 +133,7 @@ function load() {
         }
     }
 }
+
 //及时渲染谁被杀死。
 function hint() {
     if (digit == 2) {
@@ -146,5 +144,6 @@ function hint() {
         $(".weather").eq(-1).append(information);
     }
 }
+
 load();
 hint();
