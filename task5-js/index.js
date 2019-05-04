@@ -45,6 +45,9 @@ $(".btn").click(function () {
             success:function (data) {
                 console.log(data);
                 //成功之后打印状态。
+                var  usermode = JSON.parse(data);//把json转化为对象。
+                console.log(usermode.message);
+                $(".user-mode").text(usermode.message);
             }
         })
     }
