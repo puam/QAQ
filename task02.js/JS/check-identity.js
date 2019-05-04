@@ -1,6 +1,7 @@
 //取出浏览器保存的值，设置为常量方便使用。
 z=localStorage.getItem("data");
 zz=z.split(",",);//清除字符串符号.
+console.log(zz);
 //默认一张显示一张隐藏。
 document.getElementById("show").style.display="block";
 document.getElementById("conceal").style.display="none";

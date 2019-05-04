@@ -1,4 +1,4 @@
-//原生
+// // 原生
 // function logIn() {
 //     var name = document.getElementById('user').value;
 //     var pwd = document.getElementById("passWord").value;
@@ -16,8 +16,12 @@
 //             if (xhr.readyState==4){
 //                 if ((xhr.status >=200 && xhr.status<300) || xhr.status == 304) {
 //                     console.log(xhr.responseText);
+//                     //把服务器的json格式转化为对象。
+//                     var test=JSON.parse(xhr.responseText);
+//                     //跳出弹窗。
+//                     alert(test.code);
 //                 }else {
-//                     alert("请求失败："+xhr.readyState);
+//                     alert("请求失败："+xhr.readyState)
 //                 }
 //             }
 //         };
@@ -28,7 +32,6 @@
 //         xhr.setRequestHeader("Accept", "application/json,text/plain,*/*");//服务器向我们发送的。
 //         xhr.send('name='+name+'&pwd='+pwd);//json格式的数据
 //     }
-//
 // }
 $(".btn").click(function () {
     var name = $("#user").val();
@@ -45,10 +48,11 @@ $(".btn").click(function () {
             success:function (data) {
                 console.log(data);
                 //成功之后打印状态。
-                var  usermode = JSON.parse(data);//把json转化为对象。
+                var usermode = JSON.parse(data);//把json格式转化为对象。
                 console.log(usermode.message);
+                alert(usermode.code);
                 $(".user-mode").text(usermode.message);
             }
-        })
+        });
     }
 });
