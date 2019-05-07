@@ -88,12 +88,58 @@
 // }
 //
 //return
-function test() {
-    for (var i=0; i<10; i++){
-       if (i == 5){
-           continue
-       }
-       console.log(i);
-    }
-}
-test();
+// function test() {
+//     for (var i=0; i<10; i++){
+//        if (i == 5){
+//            continue
+//        }
+//        console.log(i);
+//     }
+// }
+// test();
+//过滤掉小于 10 的数组元素：
+
+//代码：
+//代码：
+// var arr =[1,2,3,4,5];
+// arr.forEach(function (item,index) {
+//     console.log(item,index);
+// });
+
+// var a=1;//1是栈
+// var b=a;
+// console.log(a,b);//b并不影响a的值，那就是深拷贝。1，1
+// var b=2;
+// console.log(a,b);//1，2
+
+//浅拷贝，
+
+
+//深拷贝
+var arr=[1,2,3,4,5,6];
+var test=arr.concat(12);
+console.log(test);//1,2,3,4,5,6,12
+console.log(arr);//1,2,3,4,5,6
+var json =
+    {"password":123456,
+        "name":"myname",
+        "Booleans":true,
+        "Array":[1,2,3],
+        "object":{}
+    };
+
+$("div").delegate("button,p", "click", function f() {
+    $("p").text("这是什么");
+    // $("span").text("1")
+});
+//
+// var test={
+//     name:"崔浩然",
+//     age:"18",//name就算key，value，崔浩然
+// };
+// console.log(test.name);
+// var arr=[];
+// for (var i=0;i<10; i++){
+//     arr.push(test);
+// }
+// console.log(arr);

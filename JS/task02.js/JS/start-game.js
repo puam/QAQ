@@ -62,7 +62,6 @@ $().ready(function () {
     $(".btn-foul").eq(-1).click(function () {
         if (digit == 4) {
             digit = digit + 1;
-            digit = digit;
             sessionStorage.setItem("figure", digit);
             window.location.href = "../html/kill-a-person.html";
             list[death.length - 1].button = "ban";
