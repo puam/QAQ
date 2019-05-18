@@ -1,0 +1,482 @@
+<html class="js no-mobile desktop no-ie chrome chrome69 task-section xkt-section gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions no-touch retina fontface domloaded gr__maikihyh_github_io w-613 gt-240 gt-320 gt-480 lt-640 lt-768 lt-800 lt-1024 lt-1280 lt-1440 lt-1680 lt-1920 portrait no-landscape"
+      id="2018-09-18-a-css-10-page">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>简述原型链是什么，有什么用处？若想访问一个对象的原型，应该使用什么方法？</title>
+
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/lib/reveal/css/zenburn.css">
+
+    <style>
+        .float {
+            float: left;
+        }
+    </style>
+
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'https://ptteng.github.io/PPT/css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/reveal/print/paper.css">
+    <script type="text/javascript" src="../plugin/markdown/marked.js"></script>
+    <script type="text/javascript" src="../plugin/markdown/markdown.js"></script>
+    <script type="text/javascript" src="../plugin/notes/notes.js"></script>
+    <script type="text/javascript" src="../plugin/highlight/highlight.js"></script>
+</head>
+
+<body data-gr-c-s-loaded="true">
+<img src="./葡萄藤PPT_files/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com/" alt="" target="_blank">
+</map>
+<div class="reveal center default" role="application" data-transition-speed="slow" data-background-transition="fade">
+    <div class="slides"
+         style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.574688);">
+        <section class="present" style="top: 178px; display: block;">
+            <h2>【简述原型链是什么，有什么用处？若想访问一个对象的原型，应该使用什么方法？ 】</h2>
+            <h3>简单的讲一下原型链的知识点</h3>
+            <p>分享人：刘超</p>
+        </section>
+        <section class="future" style="top: 1.5px; display: block;" hidden="" aria-hidden="true">
+            <p>目录</p>
+            <p>1.背景介绍</p>
+            <p>2.知识剖析</p>
+            <p>3.常见问题</p>
+            <p>4.解决方案</p>
+            <p>5.编码实战</p>
+            <p>6.扩展思考</p>
+            <p>7.参考文献</p>
+            <p>8.更多讨论</p>
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 267px; display: block;">
+            <h3>1.背景介绍</h3>
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <p style="text-align: justify">
+            <p>首先，我们要清楚的地方在于，首先JavaScript其实是没有类这个概念的，虽热在ES6之后引入了class关键字。
+                但是这只是所谓的语法糖，JavaScript仍然是基于原型的。</p>
+            <p>在JavaScript诞生的时候，市面上没有一款网页脚本语言，来和浏览器去进行网页互动。如果简单的作为一个脚本语言。
+                是完全不需要有继承机制的。但是JavaScript里面都是对象，所以必须有一种机制去和对象联系起来，所以还是有了继承。</p>
+            <P>但是，他不打算引入类的概念，因为有了类的话，JavaScript就是一种完善的面向对象编程语言了，这有点过去正式，且增加了初学者的学习难度。</P>
+            <!--<p>所以考虑到了Java与c++都是以的new，命令，所以它把new 命令引入JavaScript，从原型对象生成一个实例对象，但是没有类，如何去表示实例对象呢？</p>-->
+            <!--<p>因为java与c++都有调用类的，constructor，所以就做了一个简化版的处理，new命令后面不跟类，而是构造函数。</p>-->
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <p style="text-align: justify">
+            <p>所以考虑到了Java与c++都是以的new，命令，所以它把new 命令引入JavaScript，从原型对象生成一个实例对象，但是没有类，如何去表示实例对象呢？</p>
+            <p>因为java与c++都有调用类的，constructor，所以就做了一个简化版的处理，new命令后面不跟类，而是构造函数。</p>
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <h3>2.知识剖析</h3>
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <h4>什么是原型链</h4>
+            <p style="letter-spacing: 5px">
+                -proto-是任何对象都有的属性，而JavaScript里万物皆是对象，所以就会形成以一条proto连起来的链条，递归访问proto，必须最终到头，并且值是null。</p>
+            <p style="letter-spacing: 5px">当JavaScript引擎查找对象的属性时，先查找自身的是否存在该属性，如果不存在，会在原型链上查找，但不会查找自身的prototype。</p>
+            <p>构造函数，时一种特殊的方法，主要用来创建对象时，初始化对象，即为对象变量赋初始值。每个共组凹函数的实例都将共享构造函数的初始值。构造函数的出现是为了，解决使用object
+                构造函数和字面量表示法不方便创建大量重复对象的问题。</p>
+            <!-- <pre><code class="hljs less">//获取到的url值是以"?"开头的url
+                var deocdeURL = decodeURI(location.search);//解码url
+                //封装的解析url的方法
+                function doClickfamg(){
+                    var pureURL = deocdeURL.split("?")[1];//获取"?"以后的参数
+                    var valuesArray = pureURL.split("&");
+                    var url_Object = new Object();
+                    for(var i = 0;i< valuesArray.length;i++){
+                        var key_value = valuesArray[i].split("=");
+                        //动态给对象添加key和value
+                        //是以传递过来的key和value作为解析后的新的对象的key和value
+                        url_Object[key_value[0]] = key_value[1];
+                    }
+                    return url_Object;//返回对象
+                }
+                 </code></pre> -->
+        </section>
+        <section class="present" style="top: 0px; display: block;">
+            <!--<h4>全局作用域</h4>-->
+            <p style="letter-spacing: 5px">prototype</p>
+            <!--<p>(1)程序最外层定义的函数或者变量:</p>-->
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <p style="letter-spacing: 5px">返回函数控制</p>
+            <pre><code class="hljs less">
+           //创建一个函数
+                function test() {
+                }
+                //给test原型的name添加一个属性。
+                test.prototype.name="刘谋";
+                console.log(test);
+                var demo = new test();
+                var person = new test();
+                console.log(demo.name);//刘谋
+                console.log(person.name);//刘谋
+                console.log(person);
+            </code></pre>
+            <p style="letter-spacing: 5px">其实，函数的p的prototype的指向了一个对象，这个对象正式我们调用构造函数而创建的实例对象的原型。</p>
+            <P>那什么是原型呢。我们可以理解为，JavaScript对象（null）除外的在创建的时候，就会与之关联的对象，
+                这个对象就是我们说的原型，每个对象都会从原型继承属性。</P>
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <p style="letter-spacing: 5px">关系图</p>
+            <img src="../img/prototype1.png" height="208" width="579"/>
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <p style="letter-spacing: 5px"></p>
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <h4>那我们怎么表示实例与实例原型</h4>
+            <p style="letter-spacing: 5px">—proto—，是每个JavaScript对象除了（null）以外的都具有的属性。这个属性会指向该对象的原型。为了证明这一点，我们在看栗子</p>
+            <pre><code class="hljs less">
+
+                function test() {
+                }//每个函数都会有prototype。每个对象都会有proto。
+                var demo= new test();
+                console.log(demo.__proto__ === test.prototype);//true。
+             </code></pre>
+        </section>
+        <!--<section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">-->
+        <!--<h3>作用域链</h3>-->
+        <!--</section>-->
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+        <h4>constructor</h4>
+        <p>每个原型都有一个constructor属性指向关联构造函数。</p>
+        <pre><code class="hljs less">
+                  //给test原型的name添加一个属性。
+                  test.prototype.name="刘谋";
+                  console.log(test);
+                  var demo = new test();
+                  var person = new test();
+                  console.log(test === test.prototype.constructor);//true
+             </code></pre>
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <h4>关系图</h4>
+            <p>每个原型都有一个constructor属性指向关联构造函数。</p>
+            <pre><code class="hljs less">
+                <img src="../img/prototype3.png" height="290" width="580"/>
+             </code></pre>
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <h4>综上所述我们可以得出</h4>
+            <pre><code>
+                function test() {
+                }
+                var demo = new test;
+                console.log(demo.__proto__=== test.prototype);//true
+                console.log(test.prototype.constructor === test);//true
+            </code></pre>
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <h4>实例与原型</h4>
+            <p>当读取实例属性时，如果找不到，就会查找与对象关联的原型中的属性，如果还查不到，就去找原型的原型，一直找到顶层。</p>
+            <pre><code>
+                function test() {
+                }
+                test.prototype.name="哈喽";
+                var demo = new test();
+                console.log(demo.name);//哈喽
+                demo.name="拜拜";
+                console.log(demo.name);//拜拜
+                delete demo.name;
+                console.log(demo.name);//哈喽
+            </code></pre>
+            <p>在这个例子中，我们给实例对象，添加name属性，当我们打印demo.name的时候，结果自然为拜拜，但是当我删除person——proto——，也就是person
+            .prototype中查找，幸运的时我们找到了name的属性，为哈喽。</p>
+        </section>
+        <section>
+            <h4>原型的原型</h4>
+            <pre><code>
+                在前面我们已经讲了原型也是一个对象，既然是对象，我们就可以使用最原始的方式创建它。那就是：
+                var obj =new Object();
+                obj.name ="张飞";
+                console.log(obj.name);
+            </code></pre>
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <h3>3.常见问题</h3>
+            <p>如何访问一个对象的原型</p>
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <h4>解决方案</h4>
+            <pre><code>
+                没有正式的方法用于直接访问一个对象的原型对象——原型链中的“连接”被定义在一个内部属性中，在 JavaScript 语言标准中用 [[prototype]] 表示。
+                然而，大多数现代浏览器还是提供了一个名为 __proto__ （前后各有2个下划线）的属性，其包含了对象的原型。你可以尝试输入 person1.__proto__ 和 person1.__proto__.__proto__，看看代码中的原型链是什么样的！获取实例对象obj的原型对象，有三种方法
+                obj.__proto__obj.constructor.prototype
+                Object.getPrototypeOf(obj)
+                上面三种方法之中，前两种都不是很可靠。
+                最新的ES6标准规定，__proto__属性只有浏览器才需要部署，其他环境可以不部署。而obj.constructor.prototype在手
+                动改变原型对象时，可能会失效。
+            </code></pre>
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;"><h3>5.扩展思考</h3>
+        </section>
+        <section hidden="" aria-hidden="true" class="stack future" style="top: 330px; display: none;">
+            <section style="top: 330px; display: none;">
+                <p style="text-align: center">
+                <p style="text-align: left">__proto__属性和prototype属性的区别</p>
+                <p>__proto__属性，JavaScript中，对象都拥有的属性。</p>
+                <P>prototype属性，只有在构造函数中存在。</P>
+            </section>
+        </section>
+
+        <section hidden="" aria-hidden="true" class="stack future" style="top: 330px; display: none;">
+            <section style="top: 330px; display: none;">
+               -->
+            </section>
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <h3>6.编码实战</h3>
+        </section>
+
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <h3>7.参考文献</h3>
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" target="_blank">
+                参考一</a>
+
+            </p>
+            <p><a href="" target="_blank">参考2</a></p>
+            <p><a href="https://github.com/mqyqingfeng/Blog/issues/2"
+                  target="_blank">参考3</a></p>
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <h3>8.更多讨论</h3>
+        </section>
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <h4>鸣谢</h4>
+            <p>感谢大家观看</p>
+            <p>
+                <small>宋恒</small>
+            </p>
+        </section>
+
+    </div>
+    <div class="backgrounds">
+        <div class="slide-background present" data-loaded="true" style="display: block;"></div>
+        <div class="slide-background future" data-loaded="true" style="display: block;"></div>
+        <div class="slide-background future" data-loaded="true" style="display: block;"></div>
+        <div class="slide-background future" style="display: none;"></div>
+        <div class="slide-background future" style="display: none;"></div>
+        <div class="slide-background future" style="display: none;"></div>
+        <div class="slide-background future" style="display: none;"></div>
+        <div class="slide-background future" style="display: none;"></div>
+        <div class="slide-background future" style="display: none;"></div>
+        <div class="slide-background future" style="display: none;"></div>
+        <div class="slide-background future" style="display: none;"></div>
+        <div class="slide-background future" style="display: none;"></div>
+        <div class="slide-background future" style="display: none;"></div>
+        <div class="slide-background future" style="display: none;"></div>
+        <div class="slide-background future" style="display: none;"></div>
+        <div class="slide-background future" style="display: none;"></div>
+        <div class="slide-background stack future" style="display: none;">
+            <div class="slide-background present" style="display: none;"></div>
+        </div>
+        <div class="slide-background future" style="display: none;"></div>
+        <div class="slide-background future" style="display: none;"></div>
+        <div class="slide-background future" style="display: none;"></div>
+        <div class="slide-background future" style="display: none;"></div>
+    </div>
+    <div class="progress" style="display: block;"><span style="width: 0px;"></span></div>
+    <aside class="controls" style="display: block;">
+        <button class="navigate-left" aria-label="previous slide"></button>
+        <button class="navigate-right enabled" aria-label="next slide"></button>
+        <button class="navigate-up" aria-label="above slide"></button>
+    </aside>
+    <div class="slide-number" style="display: none;"></div>
+    <div class="speaker-notes" data-prevent-swipe=""></div>
+    <div class="pause-overlay"></div>
+    <div id="aria-status-div" aria-live="polite" aria-atomic="true"
+         style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">
+        【如何理解JS作用域与作用域链】
+        return的用法是什么？，若在for循环中，还会执行下一次循环吗？
+        分享人：刘超
+    </div>
+</div>
+
+<script src="https://ptteng.github.io/PPT/lib/reveal/js/head.min.js"></script>
+<script src="https://ptteng.github.io/PPT/lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+
+    // 初始化幻灯片
+    Reveal.initialize({
+        //        history: true,
+        transition: 'default',
+        transitionSpeed: 'slow',
+        dependencies: [{
+            src: '../plugin/markdown/marked.js'
+        },
+            {
+                src: '../plugin/markdown/markdown.js'
+            },
+            {
+                src: '../plugin/notes/notes.js',
+                async: true
+            },
+            {
+                src: '../plugin/highlight/highlight.js',
+                async: true,
+                callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }
+        ]
+    });
+    //    原始类型对象直接赋值不会相互影响
+    //    var a = 1;
+    //
+    //    var b = a;
+    //    b = 10;
+    //    console.log(a); // 1
+    ////
+    //    var a = 'hello';
+    //    var b = a;
+    //    b = 'world';
+    //    console.log(a); // hello
+    //
+    //    var a = true;
+    //    var b = a;
+    //    b = false;
+    //    console.log(a);
+
+    //数组浅复制
+    //    var a = ['隔壁老王','冠希哥', '宋经理' //定义一个名为a的属猪，里面有3个值，
+    //    ];
+    //    var b = a;   //定义一个变量b，把a赋值给他，这样比、b和a一样了
+    //    b[2] = '冲冲老师'; //然后把b的第三个值等于冲冲老师
+    //    console.log(a)//那么现在打印a 是什么结果呢
+    //
+    //    var arr = ["One","Two","Three"];   //数组的深复制，slice方法
+    //    var arrtoo = arr.slice(1);
+    //    arrtoo[2] = "set Map";
+    //    console.log(arr);//One,Two,Three
+    //    console.log(arrtoo);//One,set Map,Three
+
+    //
+    //    var arr1 = ["One","Two","Three"]; //数组的深复制，concat 方法
+    //    var arrtooo = arr1.concat(111111);
+    //    arrtooo[1] = "set Map To";
+    //    console.log(arr1);//One,Two,Three
+    //    console.log(arrtooo);//One,set Map To,Three
+
+    //
+    //    var b=[1,2,3,4,5];   //concat的链接
+    //    var c=[6,7,8,9];
+    //    var d =[4,4,22]
+    //    console.log(b.concat(c,d))
+
+    var a = {
+        name: 'yy',
+        age: 26
+    }; //对象的浅拷贝哦
+    var b = new Object();
+    b.name = a.name;
+    b.age = a.age;
+    b.name = 'xx';
+    console.log(a); //Object { name="yy", age=26}
+    console.log(b); //Object { name="xx", age=26}
+
+    var d = { //对象的浅拷贝哦 第一种
+        name: 'd',
+        oc: {
+            age: 32
+        },
+        oad: {
+            adds: {
+                bb: 12
+            }
+        }
+    };
+    var deepCopy = function (source) {
+        var result = {};
+        for (var key in source) {
+            result[key] = typeof source[key] === 'object' ? deepCopy(source[key]) : source[key]
+        }
+        return result
+    };
+
+    var c = deepCopy(d);
+    c.name = 'c';
+    c.oc = {
+        age: 49
+    };
+    console.log(c);
+    console.log(d);
+
+
+    //    var person = {    //第二种深拷贝
+    //        name: 'aa',
+    //        friends: ['da', 'dsa', 'gf']
+    //    };
+    //
+    //    var aPerson = Object.create(person, {
+    ////        name: {
+    ////            value: "gee"
+    ////        }
+    //    });
+    //
+    //    console.log(person.name);
+    //    console.log(aPerson.friends)
+
+    var Chinese = {
+        nation: '中国'
+
+    }
+    var Doctor = {
+        career: '医生'
+    }
+
+    function extendCopy(p) {
+        var c = {};
+        for (var i in p) {
+            c[i] = p[i];
+        }
+        c.uber = p;
+        return c;
+    }
+
+    var Doctor = extendCopy(Chinese);
+    Doctor.career = '医生';
+    console.log(Doctor); // 中国
+    Chinese.birthPlaces = ['北京', '上海', '香港'];
+    var Doctor = extendCopy(Chinese);
+    Doctor.birthPlaces.push('厦门');
+</script>
+
+
+</body>
+
+</html>
