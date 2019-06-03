@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jnshu职业测评</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/library.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/foot.css">
+</head>
+<body>
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">职业测评</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                请注意，题目的答案无对错之分，你不需要考虑哪个答案“应该”更好，而且不要在任何问题上思考太久， 而是应该凭你心里的第一反应做出选择。
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                <a href="./html/appraisal.html"> <button type="button" class="btn btn-primary">我已知悉</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+<header>
+    <div class="head-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img class="head-logo" src="img/home-logo-hs.png" height="70" width="250"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="content bg-white">
+                    <h5 class="text-center">MBTI性格类型测试问卷（最新版）</h5>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="main-Test-content bg-white">
+                    <h6>注意事项</h6>
+                    <div>1．请在心态平和及时间充足的情况下才开始答题。<br>
+                        2．每道题目均有两个答案：<b>A和B</b>。请仔细阅读题目，
+                        按照与你性格相符的程度分别给A和B赋予一个分数，<br>并使一组中的两个分数之和为5。
+                        最后，请在问卷后的答题纸上相应的方格内填上相应的分数。
+                        <br>3．请注意，题目的答案无对错之分，你不需要考虑哪个答案“应该”更好，而且不要在任何问题上思考太久，
+                        而是应该凭你心里的<b>第一反应</b>做出选择。<br>
+                        4．如果你觉得在不同的情境里，两个答案或许都能反映你的倾向，请选择一个对于你的行为方式来说最自然、
+                        最顺畅和最从容的答案。
+                    </div>
+                    <h6>重要提示：测试前请务必阅读以下“MBTI核心规则”及“MBTI施测流程和行为规范”：</h6>
+                    <div>MBTI核心规则可以浓缩成三个短句：倾向不是能力<b>（Type not trait）</b>、自己的判断才是最符合的判断<b>（Own best judge）</b>、类型无对错<b>（No
+                        right or wrong）</b>。
+                        <br><b>A、MBTI类型不显示能力的强度。</b>问卷通过偏好来确定倾向，而不是能力强度或程度的能力。在这个意义上，它不同于基于性状的工具如16PF，其类型的偏好是对立的两极。
+                        <br><b>B、个人所认为的自己的类型往往是最符合其自己的判断。</b>
+                        MBTI问卷提供报告的类型，可以被认为是可以参照的整体概貌。最佳拟合的过程通常是通过受测者对MBTI四维度两分法的理解，
+                        形成其自己的假设的整体类型，并和报告的类型相比较。通过比对，可以帮助受测者确定自己的最佳拟合。
+                    </div>
+                    <button type="button" class="btn btn-outline-success mt-3 mb-3" data-toggle="modal" data-target="#exampleModalCenter">
+                        开始测评
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <div class="box"></div>
+        <div class="row ">
+            <div class="col-md-3">
+                <div class="card card-content">
+                    <div class="card-body main-card-character text-center">
+                        <h5 class="card-title">施测流程</h5>
+                        <div class="background-picture "></div>
+                        <div class="card-padding">第1步　调整心态：MBTI只测试自己的性格类型，而不同性格类型之间没有优劣之分；
+                            请放松心情，最大限度地摆脱各种外部环境的压力，尽量展现真实的自我。
+                        </div>
+                        <div class="fill-one"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-content">
+                    <div class="card-body main-card-character text-center">
+                        <h5 class="card-title">测试目的</h5>
+                        <div class="background-picture "></div>
+                        <div class="card-padding">第2步　测试的目的是了解真实的自己，而不是别人所期待的你，
+                            因此在回答问卷时不是考虑哪样更好，而是哪样更符合你自己。
+                        </div>
+                        <div class="fill-two"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-content">
+                    <div class="card-body main-card-character text-center">
+                        <h5 class="card-title">答题技巧</h5>
+                        <div class="background-picture "></div>
+                        <div class="card-padding">　答问卷：尽量在一种不假思索的状态下答题，无需过分思考“这道题是测什么的”。
+                            遇到一些觉得很纠结，无法取舍的问题是正常的，尽可能选择你在放松时最可能的倾向。
+                        </div>
+                        <div class="fill-three"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-content">
+                    <div class="card-body main-card-character text-center">
+                        <h5 class="card-title">性格分析</h5>
+                        <div class="background-picture "></div>
+                        <div class="card-padding">第4步　将第一步测试结果提供的性格类型描述不同部分与自我感觉相比较
+                            ：通俗描述、气质类型、优势及潜在弱点是否吻合。
+                        </div>
+                        <div class="fill-foul"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!--页脚部分-->
+<div class="box"></div>
+<div class="box"></div>
+<footer>
+    <div class="foot-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <div class="foot-links">
+                        <p class="foot-text">技能树-改变你我</p>
+                        <div class="foot-text-none">1</div>
+                        <div class="foot-links-hover">
+                            <span class="foot-Colors">IT修真院&nbsp;| 郑州分院</span>
+                            <span class="foot-Colors">相博大佬在线辅导&nbsp;|</span>
+                            <span class="foot-Colors">加入web</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="foot-links">
+                        <p class="foot-colors">选择职业</p>
+                        <span class="foot-Colors">草船云孵化器&nbsp;</span>
+                        <span class="foot-Colors">最强IT训练营&nbsp;</span>
+                        <div class="foot-text">
+                            <span class="foot-Colors">葡萄藤轻游戏</span>
+                            <span class="foot-Colors">桌游精灵</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 offset-md-2">
+                    <div class="foot-TEXt"><span class="foot-colors">微信公众平台</span></div>
+                    <div><img src="../task06/img/WeChat.png" height="92" width="92"/></div>
+                </div>
+            </div>
+        </div>
+        <p class="clearing-margin">Copyright © 2015技能树 www.jnshu.com All Rights Reserved | 京ICP备13005880号</p>
+    </div>
+</footer>
+</body>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</html>
