@@ -1,0 +1,33 @@
+.foot-color {
+    background: #29b078;
+    color: #fff;
+}
+.foot-color .foot-links-hover {
+    margin: 1rem 0;
+    cursor: pointer;
+}
+.foot-color .foot-links-hover .foot-Colors {
+    border-bottom: 1px solid #29b078;
+}
+.foot-Colors:hover{
+    border-bottom: 1px solid #fff;
+}
+.foot-text {
+    margin: 1rem 0;
+    cursor: pointer;
+}
+.foot-text-none {
+    opacity: 0;
+}
+.clearing-margin {
+    margin: 0;
+    text-align: center;
+}
+.foot-TEXt {
+    margin: 1rem 0 10px ;
+}
+.clearing-margin {
+    margin-top: 1rem;
+    padding: 3px 0;
+    border-top: 3px solid #32c086;
+}

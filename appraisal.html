@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>职业测评</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/library.css">
+    <link rel="stylesheet" href="../css/appraisal.css">
+    <link rel="stylesheet" href="../css/animate.css">
+
+</head>
+<body>
+<div class="container wow zoomInUp">
+    <div class="row">
+        <div class="col content">
+            <div class="test">
+                <div class="evaluation-content">
+                    <h5 class="pt-3 pb-3 warm-prompt">温馨提示</h5>
+                    <p class="pb-3 warm-prompt-one">1、问卷选项没有“对”与“错”之分。请选择你是怎样做的，而不是选择你认为哪样更好。</p>
+                    <p class="pb-3 warm-prompt-two">2、测试的目的是反映最真实的自己。请最大程度放松下来，选择更接近你平时的感受或行为的那项。</p>
+                    <div class="center-horizontally">
+                        <button class="btn btn-outline-success" type="button">请点击开始</button>
+                    </div>
+                </div>
+            </div>
+            <!--选择题靠开始部分-->
+            <div class="row">
+                <div class="col topic">
+                    <p class="subject">1．当你遇到新朋友时，你 </p>
+                    <!--<label for="1" class="btn btn btn-secondary active" data-toggle="buttons"><input id="1" type="radio" name="option1"></label>-->
+                    <form class="form">
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                            <label for="1" id="option-A" class="btn   btn-outline-secondary display-block mt-3 mb-3">
+                                A．说话的时间与聆听的时间相当。
+                                <input id="1" type="radio" name="option1" value="1" checked autocomplete="off">
+                            </label>
+                            <label for="2" id="option-B" class="btn btn-outline-secondary display-block mt-3 mb-3">
+                                B．聆听的时间会比说话的时间多。
+                                <input id="2" type="radio" name="option1" value="2" checked autocomplete="off">
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../js/appraisal.js"></script>
+<script src="https://cdn.bootcss.com/wow/1.1.2/wow.js"></script>
+<script src="../js/wow.js"></script>
+<script src="../js/data.js"></script>
+</html>

@@ -1,0 +1,41 @@
+* h1 h2 h3 h4 h5 h6  {
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+body{
+    height: 100%;
+    margin: 0;
+    background-color: #fafafa;
+    /*background-image: url("../img/bg-ocean.jpg");*/
+    /*background-size: 1980px 1080px;*/
+    /*background-repeat: no-repeat;*/
+}
+.content{
+    margin: 5% 12%;
+    color: #333;
+    background:#fff;
+    border: 1px solid #fff;
+    -moz-box-shadow:-1px 0 4px #333;
+    -webkit-box-shadow:-1px 0 4px #333;
+    box-shadow:-1px 0 4px #333;
+
+}
+.evaluation-content{
+    padding: 10px;
+}
+.center-horizontally{
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0;
+}
+.display-block{
+    display: block;
+}
+.topic{
+    padding: 15px;
+}
+.hide{
+    opacity: 0;
+}

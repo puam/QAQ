@@ -1,0 +1,32 @@
+.text-align-center{
+    text-align: center;
+}
+.text-align-right{
+    text-align: right;
+}
+.text-align-left{
+    text-align: right;
+}
+.margin-top{
+    margin-top: 1rem;
+}
+.margin-bottom{
+    margin-bottom: 1rem;
+}
+.vertical-center{
+    display: flex;
+    align-items: center;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.align{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*.padding-gap{*/
+    /*padding: 10px 0;*/
+/*}*/
